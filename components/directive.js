@@ -2,6 +2,9 @@
  * Created by SPT on 2017/2/20.
  */
 var app = angular.module('app');
+app.controller('actionCtrl',function ($scope){
+
+})
 app.directive('appMain', function () {
     return {
         restrict: 'E',
@@ -10,21 +13,15 @@ app.directive('appMain', function () {
         controller: 'mainCtrl'
     };
 });
-app.directive('mainHeader', function () {
+app.directive('appAction', function () {
     return {
         restrict: 'E',
-        scope: {},
-        templateUrl: 'components/main/mainHeader.html'
-    };
-})
-app.directive('mainFooter', function () {
-    return {
-        restrict: 'E',
-        scope: {},
-        templateUrl: 'components/main/mainFooter.html'
+        scope:true,
+        templateUrl: 'components/action.html',
+        controller: 'actionCtrl'
     };
 });
 document.createElement('app-main');
-//document.createElement('main-header');
+document.createElement('app-action');
 //document.createElement('main-footer');
 

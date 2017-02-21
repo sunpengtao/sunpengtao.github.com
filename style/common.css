@@ -554,7 +554,16 @@ i, em {
 .fw_b {
     font-weight: bold;
 }
-
+/*文字位置*/
+.ta_c{
+    text-align: center;
+}
+.ta_l{
+    text-align: left;
+}
+.ta_r{
+    text-align: right;
+}
 /*css3*/
 .ts_05 {
     transition: 0.5s all;
@@ -562,6 +571,9 @@ i, em {
 
 .ts_1 {
     transition: 1s all;
+}
+.br_50{
+    border-radius: 50%;
 }
 
 /*位置*/
@@ -576,13 +588,18 @@ i, em {
     top: 0;
     left: 0
 }
-
-/*组合样式*/
-.nav-header .bar {
-    border-bottom: 1px solid #38710b;
-    color: #38710b;
+.mg_0a{
+   margin:0 auto;
 }
 
+/*组合样式*/
+/*功能样式*/
+.action p{
+    display: inline-block;
+    width:25%;
+    height:40px;
+    border-right: #9f9f9f;
+}
 
 
 

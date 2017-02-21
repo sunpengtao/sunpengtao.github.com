@@ -13,7 +13,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         .state('indexHome', {
             url: 'controllers/indexHome',
             tittle: '客厅',
-            header: true,
+            header: false,
             footer: true,
             views: {
                 '': {
@@ -25,7 +25,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         .state('info', {
             url: 'controllers/info',
             tittle: '数据统计',
-            header: true,
+            header: false,
             footer: true,
             views: {
                 '': {
@@ -37,7 +37,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         .state('timer', {
             url: 'controllers/timer',
             tittle: '时间轴',
-            header: true,
+            header: false,
             footer: true,
             views: {
                 '': {

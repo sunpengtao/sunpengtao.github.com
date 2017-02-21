@@ -1,0 +1,32 @@
+.banner {
+    height: 250px;
+    background: url('../img/jpg/banner.jpg') no-repeat top left;
+    background-size: 100% 100%;
+    bottom: 0;
+    right:0;
+}
+.avatar {
+    top: 30px;
+    left: 20px;
+    width: 42px;
+    height: 42px;
+    border: 3px solid #fff;
+    overflow: hidden;
+    background: #fff;
+}
+.avatar img{
+    padding-top:2px ;
+    width: 35px;
+}
+.banner .search{
+    margin-top:158px;
+}
+.banner .search span{
+    top:5px;
+    left:85px;
+}
+.banner .search input{
+    border-radius: 5px;
+    height:35px;
+    font-size:16px;
+}
