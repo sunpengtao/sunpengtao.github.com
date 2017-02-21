@@ -1,0 +1,178 @@
+@charset "utf-8";
+/* CSS Document */
+/*初始化样式*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{  margin:0;padding:0}
+body {font-size:12px;color:#323232;background-color:#fff;}
+ul,li {list-style:none;}
+img {border:0;}
+a:link {color:#FFFFFF;text-decoration:none;}
+a:visited {color:#FFFFFF;text-decoration:none;}
+a:hover {text-decoration:none;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:14px;}
+i,em {font-style:normal;}
+.clearfix:after{content:".";display:block;height:0;font-size:0;clear:both;visibility:hidden;}
+/*单一样式:      1.距离类    2.颜色类    3.字体相关   4.位置类    5.css3相关*/
+/*********** 1.距离类 **************/
+.w_5{width:5%;}
+.w_10{width:10%;}
+.w_15{width:15%;}
+.w_20{width:20%;}
+.w_25{width:25%;}
+.w_28{width:28%;}
+.w_30{width:30%;}
+.w_33{width:33.3333%;}
+.w_35{width:35%;}
+.w_40{width:40%;}
+.w_45{width:45%;}
+.w_48{width:48%;}
+.w_50{width:50%;}
+.w_55{width:55%;}
+.w_60{width:60%;}
+.w_65{width:65%;}
+.w_66{width:66%;}
+.w_70{width:70%;}
+.w_72{width:72%;}
+.w_74{width:74%;}
+.w_75{width:75%;}
+.w_80{width:80%;}
+.w_85{width:85%;}
+.w_90{width:90%;}
+.w_95{width:95%;}
+.w_100{width:100%;}
+
+.h_30{height:30px;}
+.h_40{height:45px;}
+.h_50{height:50px;}
+
+.pd_5 {padding:5px;}
+.pd_10{padding:10px;}
+.pd_15{padding:15px;}
+.pd_20{padding:20px;}
+.pd_25{padding:25px;}
+.pd_30{padding:30px;}
+
+.pdt_5 {padding-top:5px;}
+.pdt_10{padding-top:10px;}
+.pdt_15{padding-top:15px;}
+.pdt_20{padding-top:20px;}
+.pdt_25{padding-top:25px;}
+.pdt_30{padding-top:30px;}
+
+.pdl_5 {padding-left:5px;}
+.pdl_10{padding-left:10px;}
+.pdl_15{padding-left:15px;}
+.pdl_20{padding-left:20px;}
+.pdl_25{padding-left:25px;}
+.pdl_30{padding-left:30px;}
+
+.pdb_5 {padding-bottom:5px;}
+.pdb_10{padding-bottom:10px;}
+.pdb_15{padding-bottom:15px;}
+.pdb_20{padding-bottom:20px;}
+.pdb_25{padding-bottom:25px;}
+.pdb_30{padding-bottom:30px;}
+
+.pdr_5 {padding-right:5px;}
+.pdr_10{padding-right:10px;}
+.pdr_15{padding-right:15px;}
+.pdr_20{padding-right:20px;}
+.pdr_25{padding-right:25px;}
+.pdr_30{padding-right:30px;}
+
+.mg_5 {margin:5px;}
+.mg_10{margin:10px;}
+.mg_15{margin:15px;}
+.mg_20{margin:20px;}
+.mg_25{margin:25px;}
+.mg_30{margin:30px;}
+
+.mgt_5 {margin-top:5px;}
+.mgt_10{margin-top:10px;}
+.mgt_15{margin-top:15px;}
+.mgt_20{margin-top:20px;}
+.mgt_25{margin-top:25px;}
+.mgt_30{margin-top:30px;}
+
+.mgl_5 {margin-left:5px;}
+.mgl_10{margin-left:10px;}
+.mgl_15{margin-left:15px;}
+.mgl_20{margin-left:20px;}
+.mgl_25{margin-left:25px;}
+.mgl_30{margin-left:30px;}
+
+.mgb_5 {margin-bottom:5px;}
+.mgb_10{margin-bottom:10px;}
+.mgb_15{margin-bottom:15px;}
+.mgb_20{margin-bottom:20px;}
+.mgb_25{margin-bottom:25px;}
+.mgb_30{margin-bottom:30px;}
+
+.mgr_5 {margin-right:5px;}
+.mgr_10{margin-right:10px;}
+.mgr_15{margin-right:15px;}
+.mgr_20{margin-right:20px;}
+.mgr_25{margin-right:25px;}
+.mgr_30{margin-right:30px;}
+
+/*********** 2.颜色类  **************/
+/*文字颜色*/
+.cl_r{color:#f44949}/*红色*/
+.cl_o{color:#eca447}/*橙色*/
+.cl_y{color:#e2e05e}/*黄色*/
+.cl_b{color:#47a0ec}/*蓝色*/
+.cl_g1{color:#519c15}/*浅绿色*/
+.cl_g2{color:#38710b}/*深绿色*/
+/*文字颜色(灰色)*/
+.cl_G1{color:#5d5d5d}/*深灰*/
+.cl_G2{color:#9f9f9f}/*浅灰*/
+
+/*背景颜色*/
+.bg_r{background-color:#f44949}/*红色*/
+.bg_o{background-color:#eca447}/*橙色*/
+.bg_y{background-color:#e2e05e}/*黄色*/
+.bg_b{background-color:#47a0ec}/*蓝色*/
+.bg_g1{background-color:#519c15}/*浅绿色*/
+.bg_g2{background-color:#38710b}/*深绿色*/
+/*文字颜色(灰色)*/
+.bg_G{background-color:#cccccc}/*浅灰*/
+
+/*描边颜色*/
+.bb_g{border-bottom:#38710b;}/*深绿色*/
+.bb_G{border-bottom:#9f9f9f;}/*灰色*/
+.bb-bt_G{border-bottom:#9f9f9f;border-top:#9f9f9f;}/*灰色*/
+.bd_n{border:none;}
+
+/*字体大小*/
+.f_20{font-size: 20px}
+.f_24{font-size: 24px}
+.f_28{font-size: 28px}
+.f_30{font-size: 30px}
+.f_32{font-size: 32px}
+.f_36{font-size: 36px}
+.f_40{font-size: 40px}
+.f_42{font-size: 42px}
+.f_50{font-size: 50px}
+
+/*加粗*/
+.fw_b{font-weight:bold;}
+/*css3*/
+.ts_05{transition: 0.5s all;}
+.ts_1{transition: 1s all;}
+/*位置*/
+.p_r{position: relative;top:0;left:0}
+.p_a{position: absolute;top:0;left:0}
+/*组合样式*/
+.nav-header .bar{border-bottom:1px solid #38710b;color:#38710b;}
+
+
+
+
+
+
+
+
+
+
+
+
+
