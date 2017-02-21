@@ -1,0 +1,56 @@
+
+.b_ic {
+    display: inline-block;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 35px;
+    width: 35px;
+    background-size: 80%
+}
+
+.ic_home1 {
+    background-image: url("../img/png/home1.png");
+}
+
+.ic_home2 {
+    background-image: url("../img/png/home2.png");
+}
+
+.ic_info1 {
+    background-image: url("../img/png/info1.png");
+}
+
+.ic_info2 {
+    background-image: url("../img/png/info2.png");
+}
+
+.ic_time1 {
+    background-image: url("../img/png/time1.png");
+}
+
+.ic_time2 {
+    background-image: url("../img/png/time2.png");
+}
+
+.butLeft {
+    border-radius: 50%;
+    background-color: #519c15;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 10;
+}
+
+.butLeft:after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background: url("../img/png/back.png") no-repeat center center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: 70%;
+}
