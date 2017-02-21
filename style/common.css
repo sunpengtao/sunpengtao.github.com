@@ -194,99 +194,99 @@ i, em {
     padding: 30px;
 }
 
-.pdt_5 {
+.pt_5 {
     padding-top: 5px;
 }
 
-.pdt_10 {
+.pt_10 {
     padding-top: 10px;
 }
 
-.pdt_15 {
+.pt_15 {
     padding-top: 15px;
 }
 
-.pdt_20 {
+.pt_20 {
     padding-top: 20px;
 }
 
-.pdt_25 {
+.pt_25 {
     padding-top: 25px;
 }
 
-.pdt_30 {
+.pt_30 {
     padding-top: 30px;
 }
 
-.pdl_5 {
+.pl_5 {
     padding-left: 5px;
 }
 
-.pdl_10 {
+.pl_10 {
     padding-left: 10px;
 }
 
-.pdl_15 {
+.pl_15 {
     padding-left: 15px;
 }
 
-.pdl_20 {
+.pl_20 {
     padding-left: 20px;
 }
 
-.pdl_25 {
+.pl_25 {
     padding-left: 25px;
 }
 
-.pdl_30 {
+.pl_30 {
     padding-left: 30px;
 }
 
-.pdb_5 {
+.pb_5 {
     padding-bottom: 5px;
 }
 
-.pdb_10 {
+.pb_10 {
     padding-bottom: 10px;
 }
 
-.pdb_15 {
+.pb_15 {
     padding-bottom: 15px;
 }
 
-.pdb_20 {
+.pb_20 {
     padding-bottom: 20px;
 }
 
-.pdb_25 {
+.pb_25 {
     padding-bottom: 25px;
 }
 
-.pdb_30 {
+.pb_30 {
     padding-bottom: 30px;
 }
 
-.pdr_5 {
+.pr_5 {
     padding-right: 5px;
 }
 
-.pdr_10 {
+.pr_10 {
     padding-right: 10px;
 }
 
-.pdr_15 {
+.pr_15 {
     padding-right: 15px;
 }
 
-.pdr_20 {
+.pr_20 {
     padding-right: 20px;
 }
 
-.pdr_25 {
+.pr_25 {
     padding-right: 25px;
 }
 
-.pdr_30 {
+.pr_30 {
     padding-right: 30px;
 }
 
@@ -314,99 +314,99 @@ i, em {
     margin: 30px;
 }
 
-.mgt_5 {
+.mt_5 {
     margin-top: 5px;
 }
 
-.mgt_10 {
+.mt_10 {
     margin-top: 10px;
 }
 
-.mgt_15 {
+.mt_15 {
     margin-top: 15px;
 }
 
-.mgt_20 {
+.mt_20 {
     margin-top: 20px;
 }
 
-.mgt_25 {
+.mt_25 {
     margin-top: 25px;
 }
 
-.mgt_30 {
+.mt_30 {
     margin-top: 30px;
 }
 
-.mgl_5 {
+.ml_5 {
     margin-left: 5px;
 }
 
-.mgl_10 {
+.ml_10 {
     margin-left: 10px;
 }
 
-.mgl_15 {
+.ml_15 {
     margin-left: 15px;
 }
 
-.mgl_20 {
+.ml_20 {
     margin-left: 20px;
 }
 
-.mgl_25 {
+.ml_25 {
     margin-left: 25px;
 }
 
-.mgl_30 {
+.ml_30 {
     margin-left: 30px;
 }
 
-.mgb_5 {
+.mb_5 {
     margin-bottom: 5px;
 }
 
-.mgb_10 {
+.mb_10 {
     margin-bottom: 10px;
 }
 
-.mgb_15 {
+.mb_15 {
     margin-bottom: 15px;
 }
 
-.mgb_20 {
+.mb_20 {
     margin-bottom: 20px;
 }
 
-.mgb_25 {
+.mb_25 {
     margin-bottom: 25px;
 }
 
-.mgb_30 {
+.mb_30 {
     margin-bottom: 30px;
 }
 
-.mgr_5 {
+.mr_5 {
     margin-right: 5px;
 }
 
-.mgr_10 {
+.mr_10 {
     margin-right: 10px;
 }
 
-.mgr_15 {
+.mr_15 {
     margin-right: 15px;
 }
 
-.mgr_20 {
+.mr_20 {
     margin-right: 20px;
 }
 
-.mgr_25 {
+.mr_25 {
     margin-right: 25px;
 }
 
-.mgr_30 {
+.mr_30 {
     margin-right: 30px;
 }
 
@@ -465,6 +465,11 @@ i, em {
 }
 
 /*橙色*/
+.bg_w {
+    background-color: #fff;
+}
+
+/*白色*/
 .bg_y {
     background-color: #e2e05e
 }
@@ -487,25 +492,28 @@ i, em {
 /*深绿色*/
 /*文字颜色(灰色)*/
 .bg_G {
-    background-color: #cccccc
+    background-color: #f1f1f1;
 }
 
 /*浅灰*/
 
 /*描边颜色*/
 .bb_g {
-    border-bottom: #38710b;
+    border-bottom:1px solid  #38710b;
 }
 
 /*深绿色*/
 .bb_G {
-    border-bottom: #9f9f9f;
+    border-bottom:1px solid  #cccccc;
 }
 
 /*灰色*/
 .bb-bt_G {
-    border-bottom: #9f9f9f;
-    border-top: #9f9f9f;
+    border-bottom:1px solid  #cccccc;
+    border-top:1px solid  #cccccc;
+}
+.br_G{
+    border-right:1px solid #cccccc;
 }
 
 /*灰色*/
@@ -594,11 +602,17 @@ i, em {
 
 /*组合样式*/
 /*功能样式*/
-.action p{
+.actions{
+    margin-top:58px;
+}
+.action{
+    overflow: hidden;
+    white-space: nowrap;
+    height:100px;
+}
+.action .item{
     display: inline-block;
     width:25%;
-    height:40px;
-    border-right: #9f9f9f;
 }
 
 

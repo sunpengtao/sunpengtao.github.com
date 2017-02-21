@@ -6,9 +6,10 @@
 }
 /*功能图标*/
 .ic40{
+    display: block;
     height: 40px;
     width: 40px;
-    background-size: 80%
+    background-size: 100%
 }
 .ic_account{
     background-image: url("../img/png/account.png");

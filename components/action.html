@@ -1,6 +1,9 @@
-<div class="action bb_G" style="margin-top:40px;">
-    <p ng-repeat="item in vm.actions" ng-click="vm.goActions(item.num)">
-        <i class="ic ic40 {{item.url}}"></i>
-        <span>{{item.name}}</span>
-    </p>
+<div class="actions bg_w">
+    <ion-scroll direction="x" scrollbar-x="false" class="action bb_G">
+        <div ng-repeat="item in vm.actions" ng-click="vm.goActions(item.num)" class="pt_10 br_G item">
+            <i class="ic ic40 {{item.url}}"></i>
+            <p class="ta_c w_100 pt_5 pb_10">{{item.name}}</p>
+        </div>
+    </ion-scroll>
 </div>
+
