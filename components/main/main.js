@@ -19,8 +19,9 @@ app.controller('mainCtrl', function ($scope, $state, locals) {
             }, 10)
         }),
         goback: function () {
-            if (locals.set("lastUrl")) {
-                $state.go(locals.set("lastUrl"));
+            var url=locals.get("lastUrl");
+            if (url!==undefined) {
+                $state.go(url);
             } else {
                 location.href = document.referrer;
             }

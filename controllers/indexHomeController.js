@@ -2,11 +2,12 @@
  * Created by SPT on 2017/2/20.
  */
 var app = angular.module('app');
-app.controller('indexHomeCtrl', function ($scope) {
+app.controller('indexHomeCtrl', function ($scope,$state,locals) {
     var vm = $scope.vm = {
         Search:false,
         showSearch:function(){
-
+            locals.set('lastUrl','indexHome');
+            $state.go('search')
         },
         goActions:function(){
           alert("跳转")
