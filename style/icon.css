@@ -112,3 +112,20 @@
     top: 0;
     background-size: 70%;
 }
+/*取消图标*/
+.but{
+    border-radius: 50%;
+    background-color: #519c15;
+    width: 25px;
+    height: 25px;
+}
+.but_Cancel:after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background: url("../img/png/cancel.png") no-repeat center center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: 70%;
+}

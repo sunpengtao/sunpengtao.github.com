@@ -4,10 +4,12 @@
             <p class="avatar p_a br_50">
                 <img src="img/png/avatar.png">
             </p>
-            <p class="w_80 mg_0a p_r search" style="{{vm.cutSearch}}">
-                <span class="p_a" ng-show='vm.icSearch'><i class="ic ic25 ic_search"></i></span>
-                <input type="search" class="w_100 ta_c" placeholder="搜索功能" ng-click="show()" id="search">
-            </p>
+            <div class="search mg_0a bd_g of_h h35 bc_w f_0" ng-click="vm.showSearch()">
+                <p class="f_l bc_g1 w45 h35 p_r">
+                     <i class="ic ic25 ic_search p_a t_4 l_10"></i>
+                </p>
+                <p class="ta_c f_16 cl_G2 d_ib h30 lh_30 f_r" style="width: 253px;">搜索功能</p>
+            </div>
             <app-action></app-action>
         </div>
     </ion-header-bar>

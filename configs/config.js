@@ -45,6 +45,19 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                     controller: 'timerCtrl'
                 }
             }
+        })
+        .state('search', {
+            url: 'controllers/search',
+            tittle: '搜索',
+            header: true,
+            footer: false,
+            views: {
+                '': {
+                    templateUrl: "controllers/search.html",
+                    controller: 'searchCtrl'
+                }
+            }
         });
+
     $urlRouterProvider.otherwise('controllers/indexHome');
 });

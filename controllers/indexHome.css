@@ -20,15 +20,9 @@
 }
 .banner .search{
     margin-top:158px;
-}
-.banner .search span{
-    top:5px;
-    left:85px;
-}
-.banner .search input{
-    border-radius: 5px;
     height:35px;
-    font-size:16px;
+    border-radius: 10px;
+    width: 300px;
 }
 .cont{
     margin-top: 290px;
