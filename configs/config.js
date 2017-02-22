@@ -57,7 +57,56 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                     controller: 'searchCtrl'
                 }
             }
+        })
+        .state('account', {
+            url: 'controllers/account',
+            tittle: '个人流水',
+            header: true,
+            footer: false,
+            views: {
+                '': {
+                    templateUrl: "controllers/account.html",
+                    controller: 'accountCtrl'
+                }
+            }
+        })
+        .state('birthday', {
+            url: 'controllers/birthday',
+            tittle: '生日提醒',
+            header: true,
+            footer: false,
+            views: {
+                '': {
+                    templateUrl: "controllers/birthday.html",
+                    controller: 'birthdayCtrl'
+                }
+            }
+        })
+        .state('habit', {
+            url: 'controllers/habit',
+            tittle: '习惯养成',
+            header: true,
+            footer: false,
+            views: {
+                '': {
+                    templateUrl: "controllers/habit.html",
+                    controller: 'habitCtrl'
+                }
+            }
+        })
+        .state('studyPlan', {
+            url: 'controllers/studyPlan',
+            tittle: '学习计划',
+            header: true,
+            footer: false,
+            views: {
+                '': {
+                    templateUrl: "controllers/studyPlan.html",
+                    controller: 'studyPlanCtrl'
+                }
+            }
         });
+
 
     $urlRouterProvider.otherwise('controllers/indexHome');
 });
