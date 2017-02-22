@@ -64,7 +64,7 @@ app.controller('indexHomeCtrl', function ($scope,$state,locals) {
         vm.timer[i]=vm.timer1[i];
 
     }
-    console.log( vm.timer)
+    $('#one').css("display","none");
     locals.set('lastUrl','indexHome');
 
 });
