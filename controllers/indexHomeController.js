@@ -14,8 +14,9 @@ app.controller('indexHomeCtrl', function ($scope) {
 
     search.onfocus=function(){
         $scope.$apply(
-            vm.icSearch=false
+            vm.icSearch = false
         )
+        vm.cutSearch = "top:-130px;width:50%"
     };
     search.onblur=function(){
         $scope.$apply(

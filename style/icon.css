@@ -47,7 +47,12 @@
 .ic_search{
     background-image: url("../img/png/search.png");
 }
-
+/*文字图标*/
+.ic35{
+    height: 35px;
+    width: 70px;
+    background-color: red;
+}
 /*底部图标*/
 .b_ic {
     display: inline-block;

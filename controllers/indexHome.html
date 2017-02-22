@@ -4,9 +4,9 @@
             <p class="avatar p_a br_50">
                 <img src="img/png/avatar.png">
             </p>
-            <p class="w_80 mg_0a p_r search">
+            <p class="w_80 mg_0a p_r search" style="{{vm.cutSearch}}">
                 <span class="p_a" ng-show='vm.icSearch'><i class="ic ic25 ic_search"></i></span>
-                <input type="text" class="w_100 ta_c" placeholder="搜索功能" ng-click="show()" id="search">
+                <input type="search" class="w_100 ta_c" placeholder="搜索功能" ng-click="show()" id="search">
             </p>
             <app-action></app-action>
         </div>
