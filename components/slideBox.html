@@ -1,0 +1,27 @@
+<ion-slide-box active-slide="vm.activeSlide">
+    <ion-slide>
+        <div class="home home1 bc_G">
+            <h1>BLUE</h1>
+            <ul>
+                <li ng-repeat="time in vm.timer" ng-click="vm.goDetails(item.code)" class="w_100 mt_5 h35 bc_w">
+                   <i  class="ic {{item.color}}"></i>
+                </li>
+            </ul>
+        </div>
+    </ion-slide>
+    <ion-slide>
+        <div class="home home2 bc_G">
+            <h1>YELLOW</h1>
+        </div>
+    </ion-slide>
+    <ion-slide>
+        <div class="home home3 bc_G">
+            <h1>PINK</h1>
+        </div>
+    </ion-slide>
+    <ion-slide>
+        <div class="home home4 bc_G">
+            <h1>PINK</h1>
+        </div>
+    </ion-slide>
+</ion-slide-box>
