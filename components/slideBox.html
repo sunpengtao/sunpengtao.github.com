@@ -2,9 +2,9 @@
     <ion-slide>
         <div class="home home1 bc_G">
             <h1>BLUE</h1>
-            <ul>
-                <li ng-repeat="time in vm.timer" ng-click="vm.goDetails(item.code)" class="w_100 mt_5 h35 bc_w">
-                   <i  class="ic {{item.color}}"></i>
+            <ul class="mb_5">
+                <li ng-repeat="time in vm.timer" ng-click="vm.goDetails(item.code)" class="w_100 mb_5 h40 bc_w">
+                   <i class="ic w20 h20 br_50" ng-class="time.color"></i>
                 </li>
             </ul>
         </div>

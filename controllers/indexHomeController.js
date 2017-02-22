@@ -41,7 +41,7 @@ app.controller('indexHomeCtrl', function ($scope,$state,locals) {
             {eventTime:"3小时1分钟",eventName:"生日",eventGrade:"2",code:"23232"},
             {eventTime:"5小时2分钟",eventName:"参加例会",eventGrade:"3",code:"23243"},
             {eventTime:"1天2小时09分钟",eventName:"交友",eventGrade:"4",code:"43324"},
-            {eventTime:"20天1小时32分钟",eventName:"房租",eventGrade:"2",code:"87633"},]
+            {eventTime:"20天1小时32分钟",eventName:"房租",eventGrade:"2",code:"87633"}]
     };
     for(var i=0;i<vm.timer1.length;i++){
         switch(vm.timer1[i].eventGrade){
@@ -61,8 +61,10 @@ app.controller('indexHomeCtrl', function ($scope,$state,locals) {
             default:
                 break;
         }
-        vm.timer[i]=push(vm.timer1[i]);
+        vm.timer[i]=vm.timer1[i];
+
     }
+    console.log( vm.timer)
     locals.set('lastUrl','indexHome');
 
 });
