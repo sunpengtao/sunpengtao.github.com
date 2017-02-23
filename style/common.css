@@ -48,7 +48,9 @@ i,em {font-style:normal;}
 .h35{height:35px;}
 .h40{height:40px;}
 .h45{height:45px;}
-.h50{height:45px;}
+.h50{height:50px;}
+.h60{height:60px;}
+.h70{height:70px;}
 
 .w15{width:15px;}
 .w17{width:17px;}
@@ -58,7 +60,9 @@ i,em {font-style:normal;}
 .w35{width:35px;}
 .w40{width:40px;}
 .w45{width:45px;}
-.w50{width:45px;}
+.w50{width:50px;}
+.w60{width:60px;}
+.w70{width:70px;}
 
 .lh_25{line-height: 25px;}
 .lh_30{line-height: 30px;}
@@ -149,7 +153,8 @@ i,em {font-style:normal;}
 .bc_w{background-color:#fff}/*白色*/
 .bc_r{background-color:#f44949}/*红色*/
 .bc_o{background-color:#eca447}/*橙色*/
-.bc_y{background-color:#e2e05e}/*黄色*/
+.bc_y1{background-color:#e2e05e}/*黄色*/
+.bc_y2{background-color:#d8b102}/*土黄色*/
 .bc_b{background-color:#47a0ec}/*蓝色*/
 .bc_g1{background-color:#519c15}/*浅绿色*/
 .bc_g2{background-color:#38710b}/*深绿色*/
@@ -213,6 +218,7 @@ i,em {font-style:normal;}
 .l_3{left:3px}
 .l_4{left:4px}
 .l_5{left:5px}
+.l_7{left:7px}
 .l_10{left:10px}
 /*其他*/
 .d_b{display: block;}

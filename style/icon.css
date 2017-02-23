@@ -100,7 +100,7 @@
     width: 25px;
     height: 25px;
     position: absolute;
-    left: 10px;
+    left: 15px;
     top: 10px;
     z-index: 10;
 }
@@ -120,7 +120,7 @@
     display: inline-block;
     position: relative;
     border-radius: 50%;
-    background-color: #e2e05e;
+    background-color: #d8b102;
     width: 25px;
     height: 25px;
 }
@@ -138,7 +138,7 @@
     content: "";
     width: 25px;
     height: 25px;
-    background: url("../img/png/back.png") no-repeat center center;
+    background: url("../img/png/right.png") no-repeat center center;
     position: absolute;
     left: 0;
     top: 0;

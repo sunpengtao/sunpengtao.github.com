@@ -1,6 +1,6 @@
 <ion-slide-box active-slide="vm.activeSlide" show-pager="false">
     <ion-slide>
-        <div class="home home1 bc_G p_r">
+        <div class="home home1 bc_G p_r pb_30">
             <div class="p_a w_100 t_10">
                 <p class="mg_0a w_35 h30 bc_g1 f_18 fw_b br_15">
                     <span class="f_l d_ib w_35 pl_10 pt_2"><i class="ic ic25 ic_timer"></i></span>
@@ -13,10 +13,10 @@
             </div>
             <ul class="pt_25 pr_10 pl_10">
                 <li ng-repeat="item in vm.timer" ng-click="vm.goDetails(item.code)" class="w_100 mb_5 h40 bc_w ">
-                    <span class="d_ib w_10 ml_5"><i class="ic w17 h17 br_50 p_r t_3 l_10" ng-class="item.color"></i></span>
-                    <span class="d_ib w_35 h40 lh_40 f_16 fw_b">{{item.eventName}}</span>
-                    <span class="d_ib w_30 h40 lh_40 f_12">{{item.eventTime}}</span>
-                    <span class="d_ib w_15"><i class="but but_Right t_7 l_10"></i></span>
+                    <span class="d_ib w_10 ml_10"><i class="ic w17 h17 br_50 p_r l_10" ng-class="item.color"></i></span>
+                    <span class="d_ib w_35 h40 lh_40 f_16 fw_b ml_5 of_h ws_n" style="text-overflow: ellipsis">{{item.eventName}}</span>
+                    <span class="d_ib w_30 h40 lh_40 f_12 of_h ws_n" style="text-overflow: ellipsis">{{item.eventTime}}</span>
+                    <span class="d_ib w_15 f_r"><i class="but but_Right t_7 l_10"></i></span>
                 </li>
             </ul>
         </div>

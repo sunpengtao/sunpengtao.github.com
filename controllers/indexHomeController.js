@@ -49,7 +49,7 @@ app.controller('indexHomeCtrl', function ($scope,$state,locals) {
                 vm.timer1[i].color='bc_b';
                 break;
             case "2":
-                vm.timer1[i].color='bc_y';
+                vm.timer1[i].color='bc_y1';
                 break;
             case "3":
                 vm.timer1[i].color='bc_o';
