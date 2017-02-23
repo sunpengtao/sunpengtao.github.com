@@ -124,6 +124,9 @@ i,em {font-style:normal;}
 .ml_20{margin-left:20px;}
 .ml_25{margin-left:25px;}
 .ml_30{margin-left:30px;}
+.ml_50{margin-left:50px;}
+.ml_60{margin-left:60px;}
+
 .mb_5 {margin-bottom:5px;}
 .mb_10{margin-bottom:10px;}
 .mb_15{margin-bottom:15px;}
@@ -228,6 +231,11 @@ i,em {font-style:normal;}
 .d_n{display: none}
 .of_h{overflow:hidden}/*剪切超过部分*/
 .ws_n{white-space: nowrap}/*强制居中*/
+.z_1{z-index: 1}
+.z_2{z-index: 2}
+.z_3{z-index: 3}
+.z_4{z-index: 4}
+
 
 /*组合样式*/
 .nav-header .bar{border-bottom:1px solid #38710b;color:#38710b;}
