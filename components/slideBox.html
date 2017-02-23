@@ -1,5 +1,5 @@
 <ion-slide-box active-slide="vm.activeSlide" show-pager="false" on-slide-changed="vm.slideHasChanged(index)">
-    <ion-slide>
+    <ion-slide ng-repeat="item1 in vm.four">
         <div class="home home1 bc_G p_r pb_30">
             <div class="p_a w_100 t_10 z_2">
                 <p class="mg_0a w_35 h30 bc_g1 f_18 fw_b br_15">
@@ -17,36 +17,6 @@
                     <span class="d_ib w_35 h40 lh_40 f_16 fw_b ml_5 of_h ws_n">{{item.eventName}}</span>
                     <span class="d_ib w_30 h40 lh_40 f_12 of_h ws_n">{{item.eventTime}}</span>
                     <span class="d_ib f_r pt_8"><i class="but but_Right"></i></span>
-                </li>
-            </ul>
-        </div>
-    </ion-slide>
-    <ion-slide>
-        <div class="home home2 bc_G">
-            <h1>YELLOW</h1>
-            <ul>
-                <li ng-repeat="time in vm.timer" ng-click="vm.goDetails(item.code)" class="w_100 mb_5 h40 bc_w">
-                    <i class="ic w20 h20 br_50" ng-class="time.color"></i>
-                </li>
-            </ul>
-        </div>
-    </ion-slide>
-    <ion-slide>
-        <div class="home home3 bc_G">
-            <h1>PINK</h1>
-            <ul>
-                <li ng-repeat="time in vm.timer" ng-click="vm.goDetails(item.code)" class="w_100 mb_5 h40 bc_w">
-                    <i class="ic w20 h20 br_50" ng-class="time.color"></i>
-                </li>
-            </ul>
-        </div>
-    </ion-slide>
-    <ion-slide>
-        <div class="home home4 bc_G">
-            <h1>PINK</h1>
-            <ul>
-                <li ng-repeat="time in vm.timer" ng-click="vm.goDetails(item.code)" class="w_100 mb_5 h40 bc_w">
-                    <i class="ic w20 h20 br_50" ng-class="time.color"></i>
                 </li>
             </ul>
         </div>

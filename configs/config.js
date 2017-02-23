@@ -105,6 +105,55 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                     controller: 'studyPlanCtrl'
                 }
             }
-        });
+        })
+        .state('doctor', {
+            url: 'controllers/doctor',
+            tittle: '私人医生',
+            header: true,
+            footer: false,
+            views: {
+                '': {
+                    templateUrl: "controllers/doctor.html",
+                    controller: 'doctorCtrl'
+                }
+            }
+        })
+        .state('woman', {
+            url: 'controllers/woman',
+            tittle: '女生',
+            header: true,
+            footer: false,
+            views: {
+                '': {
+                    templateUrl: "controllers/woman.html",
+                    controller: 'womanCtrl'
+                }
+            }
+        })
+        .state('manage', {
+            url: 'controllers/manage',
+            tittle: '理财计算器',
+            header: true,
+            footer: false,
+            views: {
+                '': {
+                    templateUrl: "controllers/manage.html",
+                    controller: 'manageCtrl'
+                }
+            }
+        })
+        .state('repayment', {
+            url: 'controllers/repayment',
+            tittle: '定期还款',
+            header: true,
+            footer: false,
+            views: {
+                '': {
+                    templateUrl: "controllers/repayment.html",
+                    controller: 'repaymentCtrl'
+                }
+            }
+        })
+
     $urlRouterProvider.otherwise('controllers/indexHome');
 });

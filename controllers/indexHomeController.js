@@ -2,78 +2,76 @@
  * Created by SPT on 2017/2/20.
  */
 var app = angular.module('app');
-app.controller('indexHomeCtrl', function ($scope,$state,locals) {
+app.controller('indexHomeCtrl', function ($ionicScrollDelegate,$scope,$state,locals,ary,demo,action) {
     var vm = $scope.vm = {
+        four:[{},{},{},{}],
+        timer1:demo.timer1,
+        actions:ary.actions,
+        bannerUrl:"background-image:url('img/jpg/banner1.jpg')",
+        timer:[],
+        action:[],
         activeSlide:0,
         Search:false,
         pDom:document.getElementsByClassName('controllerBox')[0].getElementsByTagName('p'),
-        timer:[],
-        actions:[{name:"生日提醒",url:"ic_birthday",num:"1"},
-            {name:"习惯养成",url:"ic_habit",num:"2"},
-            {name:"个人流水",url:"ic_account",num:"3"},
-            {name:"学习计划",url:"ic_studyPlan",num:"4"},
-            {name:"生日提醒",url:"ic_birthday",num:"4"},
-            {name:"习惯养成",url:"ic_habit",num:"2"},
-            {name:"习惯养成",url:"ic_habit",num:"2"},
-            {name:"生日提醒",url:"ic_birthday",num:"1"}],
-        timer1:[{eventTime:"2小时21分钟",eventName:"信用卡还款323233232",eventGrade:"1",code:"23231"},
-            {eventTime:"3小时1分钟",eventName:"生日323233232",eventGrade:"2",code:"23232"},
-            {eventTime:"5小时2分钟",eventName:"参加例会323232323232",eventGrade:"3",code:"23243"},
-            {eventTime:"1天2小时09分钟",eventName:"交友23232323",eventGrade:"4",code:"43324"},
-            {eventTime:"1月20天12小时32分钟",eventName:"房租232323",eventGrade:"2",code:"87633"}],
         showSearch:function(){
             $state.go('search')
         },
         goActions:function(num){
-            switch(num){
-                case "1":
-                    $state.go('birthday');
-                    break;
-                case "2":
-                    $state.go('habit');
-                    break;
-                case "3":
-                    $state.go('account');
-                    break;
-                case "4":
-                    $state.go('studyPlan');
-                    break;
-                case "b":
-                default:
-                    break;
-            }
+            action.go(num)
         },
         controllerBox:function(num){
+            //点击切换文字
             for(var i=0;i<4;i++){
                 vm.pDom[i].style="font-size:16px;font-weight:normal";
-            }
+            };
             vm.pDom[num].style="font-size:18px;font-weight:bold";
             switch(num){
                 case 0:
+                    vm.bannerUrl="background-image:url('img/jpg/banner1.jpg')";
                     vm.styleBox='left:0';
                     vm.activeSlide=0;
                     break;
                 case 1:
+                    vm.bannerUrl="background-image:url('img/jpg/banner2.jpg')";
                     vm.styleBox='left:25%';
                     vm.activeSlide=1;
                     break;
                 case 2:
+                    vm.bannerUrl="background-image:url('img/jpg/banner3.jpg')";
                     vm.styleBox='left:50%';
                     vm.activeSlide=2;
                     break;
                 case 3:
+                    vm.bannerUrl="background-image:url('img/jpg/banner4.jpg')";
                     vm.styleBox='left:75%';
                     vm.activeSlide=3;
                     break;
                 case "b":
                 default:
                     break;
-            }
+            };
+            //滑动切换功能模块
         },
-        slideHasChanged:function(index){
-            vm.controllerBox(index)
+        actionBox:function(index){
+            vm.action=[];
+            for(var i=0;i<vm.actions.length;i++){
+                if(vm.actions[i].type==index)(
+                    vm.action.push(vm.actions[i])
+                );
+            };
         }
     };
+    //vm.action.push({孙鹏他:"1"});
+    //滑动box事件;
+    vm.slideHasChanged=function(index){
+        //滑动切换文字
+        vm.controllerBox(index);
+        //滑动切换功能模块
+        vm.actionBox(index);
+        //切换后初始化位置
+        $ionicScrollDelegate.$getByHandle('leftScroll').scrollTo(0,0,[true]);
+    };
+    vm.actionBox(0);
     for(var i=0;i<vm.timer1.length;i++){
         switch(vm.timer1[i].eventGrade){
             case "1":
@@ -92,10 +90,8 @@ app.controller('indexHomeCtrl', function ($scope,$state,locals) {
             default:
                 break;
         }
-        vm.timer[i]=vm.timer1[i];
-
+        vm.timer.push(vm.timer1[i]);
     }
-    $('#one').css("display","none");
     locals.set('lastUrl','indexHome');
 
 });
