@@ -1,9 +1,12 @@
-.banner {height: 235px;background: url('../img/jpg/banner.jpg') no-repeat top left;background-size: 100% 100%;bottom: 0;right:0;  }
-.actions{ margin-top:53px;}
-.avatar {top: 30px;  left: 20px;  width: 42px;  height: 42px;  border: 3px solid #fff;  overflow: hidden;  background: #fff;  }
-.avatar img{  padding-top:2px ;  width: 35px;  }
-.banner .search{  margin-top:143px;   width: 270px;  }
-.cont{margin-top: 285px;}
+.banner {height: 215px;background: url('../img/jpg/banner.jpg') no-repeat top left;background-size: 100% 100%;bottom: 0;right:0;  }
+.avatar {top: 20px;  left: 20px;  width: 42px;  height: 42px;  border: 3px solid #fff;  overflow: hidden;  background: #fff;  }
+.avatar img{padding-top:2px ;  width: 35px;  }
+.search{margin-top:125px;width: 270px; }/*搜索*/
+.controllerBox div p{width: 25%;float: left;height: 45px;line-height:45px;transition: 0.3s all;}/*房间切换*/
+.controllerBox span{height: 5px;position: absolute;bottom: -5px;left:0;}
+
+
+.cont{margin-top: 265px;}
 .home1 li:nth-child(1){height:80px;}
 .home1 li:nth-child(1) span{margin-top: 35px;}
 .home1 li span:nth-child(2){text-overflow: ellipsis;margin-left: 15%}

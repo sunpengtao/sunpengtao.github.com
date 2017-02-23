@@ -10,6 +10,15 @@
                 </p>
                 <p class="h40 f_r w_55 f_18 pt_8 cl_G2">搜索功能</p>
             </div>
+            <div class="w_100 h45 ta_c f_16 cl_w d_ib controllerBox p_r">
+                <div>
+                    <p ng-click="vm.controllerBox(0)" class="f_18 fw_b">大厅</p>
+                    <p ng-click="vm.controllerBox(1)">书房</p>
+                    <p ng-click="vm.controllerBox(2)">卧室</p>
+                    <p ng-click="vm.controllerBox(3)">厨房</p>
+                </div>
+                <span style="{{vm.styleBox}}" class="w_25 bc_w ts_03"></span>
+            </div>
             <app-action></app-action>
         </div>
     </ion-header-bar>

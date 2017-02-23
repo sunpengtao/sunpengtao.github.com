@@ -195,6 +195,7 @@ i,em {font-style:normal;}
 /*加粗*/
 .fw_b{font-weight:bold;}
 /*css3*/
+.ts_03{transition: 0.3s all;}
 .ts_05{transition: 0.5s all;}
 .ts_1{transition: 1s all;}
 .br_50{border-radius: 50%;}
