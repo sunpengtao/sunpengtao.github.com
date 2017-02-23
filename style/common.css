@@ -80,6 +80,7 @@ i,em {font-style:normal;}
 
 .pt_2 {padding-top:2px;}
 .pt_5 {padding-top:5px;}
+.pt_8{padding-top:8px;}
 .pt_10{padding-top:10px;}
 .pt_15{padding-top:15px;}
 .pt_20{padding-top:20px;}
@@ -233,7 +234,7 @@ i,em {font-style:normal;}
 /*弹出框*/
 .bgPop{ position:absolute; top: 0; left: 0;bottom:0;right:0; background-color: rgba(255,255,255,0.4); height:100%;width:100%;z-index: 1;}
 /*功能样式*/
-.actions{ margin-top:58px;}
+
 
 
 
