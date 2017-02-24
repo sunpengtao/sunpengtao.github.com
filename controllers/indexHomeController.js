@@ -25,31 +25,9 @@ app.controller('indexHomeCtrl', function ($ionicScrollDelegate,$scope,$state,loc
                 vm.pDom[i].style="font-size:16px;font-weight:normal";
             };
             vm.pDom[num].style="font-size:18px;font-weight:bold";
-            switch(num){
-                case 0:
-                    vm.bannerUrl="background-image:url('img/jpg/banner1.jpg')";
-                    vm.styleBox='left:0';
-                    vm.activeSlide=0;
-                    break;
-                case 1:
-                    vm.bannerUrl="background-image:url('img/jpg/banner2.jpg')";
-                    vm.styleBox='left:25%';
-                    vm.activeSlide=1;
-                    break;
-                case 2:
-                    vm.bannerUrl="background-image:url('img/jpg/banner3.jpg')";
-                    vm.styleBox='left:50%';
-                    vm.activeSlide=2;
-                    break;
-                case 3:
-                    vm.bannerUrl="background-image:url('img/jpg/banner4.jpg')";
-                    vm.styleBox='left:75%';
-                    vm.activeSlide=3;
-                    break;
-                case "b":
-                default:
-                    break;
-            };
+            vm.bannerUrl="background-image:url('img/jpg/banner"+(num+1)+".jpg')";
+            vm.styleBox='left:'+(num*25)+'%';
+            vm.activeSlide=num;
             //滑动切换功能模块
         },
         actionBox:function(index){
