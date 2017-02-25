@@ -91,3 +91,22 @@ app.service("gradeColor",function(){
         }
     }
 });
+app.service("search",function(){
+    return  function (value,array,obj){
+        var len = array.length;
+        var arr = [];
+        for(var i=0;i<len;i++){
+            //如果字符串中不包含目标字符会返回-1
+            if(obj){
+                if(array[i][obj].indexOf(value)>=0){
+                    arr.push(array[i]);
+                }
+            }else {
+                if(array[i].indexOf(value)>=0){
+                    arr.push(array[i]);
+                }
+            }
+        }
+        return arr;
+    };
+});

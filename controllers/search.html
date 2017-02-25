@@ -5,19 +5,30 @@
                 <span class="d_ib h35 w45">
                     <i class="ic ic25 ic_search p_r t_3 l_7"></i>
                 </span>
-                <input type="search" class="d_ib lh_40 f_20 bc_w p_a w_70" style="left: 40px;height: 30px" ng-model="vm.value" id="text">
+                <input type="search" class="d_ib lh_40 f_20 bc_w p_a w_70" style="left: 40px;height: 30px"  id="text">
             </div>
             <p class="f_r h35 lh_35 w60 bc_y2 ta_c f_18 cl_w br_5" ng-click="vm.search()">搜索</p>
         </div>
-        <div class="w_100 bc_w">
-            <h1 class="pl_15 pr_15 h35 cl_G1 f_14 fw_b lh_35 bb_G clearfix">
+        <div class="w_100 bc_w mb_20 bb-bt_G">
+            <h1 class="ml_15 pr_15 h35 cl_G1 f_14 fw_b lh_35 bb_G clearfix">
                 <span class="f_l">搜索记录</span>
                 <span class="f_r f_12 fw_b cl_g1" ng-click="vm.search('clear')">清除记录</span>
             </h1>
             <div class="pd_15 w_100">
-                <p class="pd_5 bc_G mg_5 ta_c br_5 d_ib" ng-repeat="item in vm.searchCont" ng-hide="vm.showSearchCont">{{item.name}}</p>
-                <p class="bc_G f_14 pd_5 lh_30 cl_G2" ng-show="vm.showSearchCont">{{vm.searchCont}}</p>
+                <p class="pd_5 bc_G mg_5 ta_c br_5 d_ib" ng-repeat="item in vm.searchCont" ng-hide="vm.showSearchCont" ng-click="vm.search(item.name)">{{item.name}}</p>
+                <p class="bc_G f_14 pd_5 lh_30 cl_G2 br_5" ng-show="vm.showSearchCont">{{vm.searchCont}}</p>
             </div>
         </div>
+        <div class="W_100 bc_w bt_G">
+            <h1 class="ml_15 pr_15 h35 cl_G1 f_14 fw_b lh_35 bb_G clearfix">
+                <span class="f_l">搜索结果</span>
+                <!--<span class="f_r f_12 fw_b cl_g1" ng-click="vm.search('clear')">清除记录</span>-->
+            </h1>
+            <app-action ng-hide="vm.searchResult"></app-action>
+            <div class="pd_15 w_100">
+                <p class="bc_G f_14 pd_5 lh_30 cl_G2 br_5" ng-show="vm.searchResult">无结果</p>
+            </div>
+        </div>
+
     </ion-content>
 </ion-view>
