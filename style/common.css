@@ -80,6 +80,7 @@ i,em {font-style:normal;}
 
 .pt_2 {padding-top:2px;}
 .pt_5 {padding-top:5px;}
+.pt_7{padding-top:7px;}
 .pt_8{padding-top:8px;}
 .pt_10{padding-top:10px;}
 .pt_15{padding-top:15px;}
@@ -174,6 +175,8 @@ i,em {font-style:normal;}
 
 /*字体大小*/
 .f_0{font-size: 0}
+.f_8{font-size: 8px}
+.f_12{font-size: 12px}
 .f_14{font-size: 14px}
 .f_16{font-size: 16px}
 .f_18{font-size: 18px}

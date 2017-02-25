@@ -1,13 +1,23 @@
 <ion-view>
     <ion-content class="has-header bc_G">
-        <div class="w_100 pr_15 pl_15 pt_15">
-            <div class="f_l br_5 h40 bd_g w_75 of_h p_r bc_w">
-                <span class="d_ib h40 w45">
-                    <i class="ic ic25 ic_search p_r t_5 l_7"></i>
+        <div class="w_100 pd_15 clearfix">
+            <div class="f_l br_5 h35 bd_g w_75 of_h p_r bc_w">
+                <span class="d_ib h35 w45">
+                    <i class="ic ic25 ic_search p_r t_3 l_7"></i>
                 </span>
-                <input type="search" class="h40 d_ib lh_40 f_20 bc_w p_a w_50" style="left: 40px;">
+                <input type="search" class="d_ib lh_40 f_20 bc_w p_a w_70" style="left: 40px;height: 30px" ng-model="vm.value">
             </div>
-            <p class="f_r h40 lh_40 w60 bc_y2 ta_c f_18 cl_w br_5">搜索</p>
+            <p class="f_r h35 lh_35 w60 bc_y2 ta_c f_18 cl_w br_5" ng-click="vm.search()">搜索</p>
+        </div>
+        <div class="w_100 bc_w">
+            <h1 class="pl_15 pr_15 h35 cl_G1 f_14 fw_b lh_35 bb_G clearfix">
+                <span class="f_l">搜索记录</span>
+                <span class="f_r f_12 fw_b cl_g1" ng-click="vm.search('clear')">清除记录</span>
+            </h1>
+            <div class="pd_15 w_100">
+                <p class="pd_5 bc_G mg_5 ta_c br_5 d_ib" ng-repeat="item in vm.searchCont" ng-hide="vm.showSearchCont">{{item.name}}</p>
+                <p class="bc_G f_14 pd_5 lh_30 cl_G2" ng-show="vm.showSearchCont">{{vm.searchCont}}</p>
+            </div>
         </div>
     </ion-content>
 </ion-view>

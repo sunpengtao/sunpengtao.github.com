@@ -2,35 +2,38 @@
  * Created by SPT on 2017/2/21.
  */
 var app = angular.module('app');
-app.factory('locals', ['$window', function ($window) {
+app.factory('locals', ['$window', function () {
     return {
-        //存储单个属性
-        set: function (key, value) {
-            $window.localStorage[key] = value;
+        //存储
+        set: function (key, value,add) {
+            function setlocal(key,value){
+                localStorage.setItem(key,JSON.stringify(value));
+            }
+            function getlocal(key){
+                return JSON.parse(localStorage.getItem(key));
+            }
+            if(add){
+                var judge=getlocal(key) != null;
+                if(judge==false){
+                    var empty=[];
+                    empty.push(value);
+                    setlocal(key,empty);
+                }else{
+                    var Old=getlocal(key);
+                    Old.push(value);
+                    setlocal(key,Old);
+                };
+            }else {
+                setlocal(key,value);
+            };
         },
-        //读取单个属性
-        get: function (key, defaultValue) {
-            return $window.localStorage[key] || defaultValue;
+        //读取
+        get: function (key) {
+            return JSON.parse(localStorage.getItem(key));
         },
-        //删除单个属性
+        //删除
         remove: function (key) {
-            $window.localStorage.removeItem(key);
-        },
-
-        clear: function () {
-            var inApp = this.get('inApp');
-            var referId = this.get('referId');
-            $window.localStorage.clear();
-            this.set('inApp', inApp);
-            this.set('referId', referId);
-        },
-        //存储对象，以JSON格式存储
-        setObject: function (key, value) {
-            $window.localStorage[key] = JSON.stringify(value);
-        },
-        //读取对象
-        getObject: function (key) {
-            return JSON.parse($window.localStorage[key] || '{}');
+            localStorage.removeItem(key)
         }
     }
 }]);
@@ -66,6 +69,25 @@ app.service('action', function ($state) {
                     break;
             }
     }
-
 });
-
+app.service("gradeColor",function(){
+    return  function (num){
+        switch(num){
+            case "1":
+                return 'bc_b';
+                break;
+            case "2":
+                return 'bc_y1';
+                break;
+            case "3":
+                return 'bc_o';
+                break;
+            case "4":
+                return 'bc_r';
+                break;
+            default:
+                return 'bc_b';
+                break;
+        }
+    }
+});

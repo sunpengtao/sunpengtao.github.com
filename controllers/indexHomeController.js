@@ -2,7 +2,7 @@
  * Created by SPT on 2017/2/20.
  */
 var app = angular.module('app');
-app.controller('indexHomeCtrl', function ($ionicScrollDelegate,$scope,$state,locals,ary,demo,action) {
+app.controller('indexHomeCtrl', function ($ionicScrollDelegate,$scope,$state,locals,ary,demo,action,gradeColor) {
     var vm = $scope.vm = {
         four:[{},{},{},{}],
         timer1:demo.timer1,
@@ -22,9 +22,12 @@ app.controller('indexHomeCtrl', function ($ionicScrollDelegate,$scope,$state,loc
         controllerBox:function(num){
             //点击切换文字
             for(var i=0;i<4;i++){
-                vm.pDom[i].style="font-size:16px;font-weight:normal";
+                vm.pDom[i].style.fontSize="16px";
+                vm.pDom[i].style.fontWeight="normal";
             };
-            vm.pDom[num].style="font-size:18px;font-weight:bold";
+            vm.pDom[num].style.fontSize="18px";
+            vm.pDom[num].style.fontWeight="bold";
+
             vm.bannerUrl="background-image:url('img/jpg/banner"+(num+1)+".jpg')";
             vm.styleBox='left:'+(num*25)+'%';
             vm.activeSlide=num;
@@ -51,25 +54,8 @@ app.controller('indexHomeCtrl', function ($ionicScrollDelegate,$scope,$state,loc
     };
     vm.actionBox(0);
     for(var i=0;i<vm.timer1.length;i++){
-        switch(vm.timer1[i].eventGrade){
-            case "1":
-                vm.timer1[i].color='bc_b';
-                break;
-            case "2":
-                vm.timer1[i].color='bc_y1';
-                break;
-            case "3":
-                vm.timer1[i].color='bc_o';
-                break;
-            case "4":
-                vm.timer1[i].color='bc_r';
-                break;
-            case "":
-            default:
-                break;
-        }
+        vm.timer1[i].color=gradeColor(vm.timer1[i].eventGrade);
         vm.timer.push(vm.timer1[i]);
     }
     locals.set('lastUrl','indexHome');
-
 });

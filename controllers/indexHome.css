@@ -6,7 +6,7 @@
 .controllerBox span{height: 5px;position: absolute;bottom: -5px;left:0;}
 
 
-.cont{margin-top: 265px;}
+.cont{margin-top: 260px;}
 .home1 li:nth-child(1){height:80px;}
 .home1 li:nth-child(1) span{margin-top: 35px;}
 .home1 li span:nth-child(2){text-overflow: ellipsis;margin-left: 15%}

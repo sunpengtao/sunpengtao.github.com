@@ -23,7 +23,7 @@ app.controller('mainCtrl', function ($scope, $state, locals) {
             if (url!==undefined) {
                 $state.go(url);
             } else {
-                location.href = document.referrer;
+                $state.go("indexHome");
             }
         },
         munClass: function (num) {
