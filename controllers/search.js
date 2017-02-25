@@ -34,4 +34,5 @@ app.controller('searchCtrl',function($scope,locals){
         getSearchCont();
         console.log(vm.searchCont);
     };
+    angular.element(document.getElementById("text")).focus();
 });
