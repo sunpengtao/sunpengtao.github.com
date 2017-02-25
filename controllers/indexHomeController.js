@@ -27,7 +27,6 @@ app.controller('indexHomeCtrl', function ($ionicScrollDelegate,$scope,$state,loc
             };
             vm.pDom[num].style.fontSize="18px";
             vm.pDom[num].style.fontWeight="bold";
-
             vm.bannerUrl="background-image:url('img/jpg/banner"+(num+1)+".jpg')";
             vm.styleBox='left:'+(num*25)+'%';
             vm.activeSlide=num;
@@ -42,7 +41,6 @@ app.controller('indexHomeCtrl', function ($ionicScrollDelegate,$scope,$state,loc
             };
         }
     };
-    //vm.action.push({孙鹏他:"1"});
     //滑动box事件;
     vm.slideHasChanged=function(index){
         //滑动切换文字

@@ -4,6 +4,7 @@
 var app = angular.module('app');
 app.controller('actionCtrl',function ($scope){});
 app.controller('slideCtrl',function ($scope){});
+app.controller('loginCtrl',function ($scope){});
 app.directive('appMain', function () {
     return {
         restrict: 'E',
@@ -28,8 +29,17 @@ app.directive('appSlide', function () {
         controller: 'slideCtrl'
     };
 });
+app.directive('appLogin', function () {
+    return {
+        restrict: 'E',
+        scope:true,
+        templateUrl: 'components/login.html',
+        controller: 'loginCtrl'
+    };
+});
 document.createElement('app-main');
 document.createElement('app-action');
 document.createElement('app-slide');
+document.createElement('app-login');
 //document.createElement('main-footer');
 
