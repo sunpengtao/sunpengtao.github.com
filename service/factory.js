@@ -37,6 +37,7 @@ app.factory('locals', ['$window', function () {
         }
     }
 }]);
+//点击功能跳转路由
 app.service('action', function ($state) {
         this.go=function (num) {
             switch (num) {
@@ -70,6 +71,7 @@ app.service('action', function ($state) {
             }
     }
 });
+//显示事件级别颜色
 app.service("gradeColor",function(){
     return  function (num){
         switch(num){
@@ -91,6 +93,7 @@ app.service("gradeColor",function(){
         }
     }
 });
+//搜索
 app.service("search",function(){
     return  function (value,array,obj){
         var len = array.length;
@@ -107,8 +110,27 @@ app.service("search",function(){
                 }
             }
         }
-        return arr;
+        if(arr.length!=0){
+            return arr;
+        }else {
+            return false
+        }
     };
 });
-
+//判断数组里面的对象是否包含指定的内容
+app.service("equals",function(){
+    return  function (array,obj,value){
+            var num=0;
+        array.map(function(item){
+           if(item[obj]==value){
+               num=1;
+           }
+        });
+        if(num==0){
+            return false
+        }else{
+            return true
+        }
+    };
+});
 

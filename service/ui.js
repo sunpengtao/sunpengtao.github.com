@@ -13,6 +13,20 @@ app.factory('ui',function($ionicPopup){
             }
         }
 });
+//为空弹出层
+app.factory('alertCont',function(ui){
+    return {
+        _null:function(value){
+            //弹出状态为空
+            if(value==''||value==null){
+                ui._alert("提示","输入内容不能为空");
+            }else{
+                return false
+            }
+            return true
+        }
+    };
+});
 //更多选项
 app.service("moreBut",function($ionicActionSheet,$state){
     return function (tle){

@@ -2,8 +2,9 @@
  * Created by SPT on 2017/2/20.
  */
 var app = angular.module('app');
-app.controller('indexHomeCtrl', function ($ionicScrollDelegate,$scope,$state,locals,ary,demo,action,gradeColor) {
+app.controller('indexHomeCtrl', function ($ionicScrollDelegate,$scope,$state,$ionicSideMenuDelegate,locals,ary,demo,action,gradeColor) {
     var vm = $scope.vm = {
+        cutNum:0,
         four:[{},{},{},{}],
         timer1:demo.timer1,
         actions:ary.actions,
@@ -54,6 +55,18 @@ app.controller('indexHomeCtrl', function ($ionicScrollDelegate,$scope,$state,loc
     for(var i=0;i<vm.timer1.length;i++){
         vm.timer1[i].color=gradeColor(vm.timer1[i].eventGrade);
         vm.timer.push(vm.timer1[i]);
-    }
+    };
     locals.set('lastUrl','indexHome');
+    vm.avatar=function(){
+        if(vm.cutNum==0){
+            //点击头像打开左滑栏
+            vm.cut="left:200px;transform:scale(0.8,0.8)";
+            vm.cutNum++;
+        }else{
+            //点击头像恢复主视图
+            vm.cut="left:0px;";
+            vm.cutNum=0;
+        }
+
+    };
 });

@@ -2,7 +2,7 @@
  * Created by SPT on 2017/2/22.
  */
 var app=angular.module('app');
-app.controller('searchCtrl',function($scope,locals,ary,action,search,ui){
+app.controller('searchCtrl',function($scope,locals,ary,action,search,ui,equals,alertCont){
     var vm=$scope.vm={
         searchCont:"",
         showSearchCont:true,
@@ -47,25 +47,22 @@ app.controller('searchCtrl',function($scope,locals,ary,action,search,ui){
         var value;
         //获取输入框的值
         vm.value=vm.input.value;
-        if(vm.value==''||vm.value==null&&type==undefined){
-            ui._alert("提示","输入内容不能为空");
+        //为空弹出层
+        if(alertCont._null(vm.value)){
             return
-        };
+        }
         //储存搜索记录
         value={name:vm.value};
-        locals.set('commonSearch',value,"add");
-        //console.log(vm.actions);
-        //搜索结果
-
-        function getResult(){
-            var result=search(vm.value,vm.actions,"name");
-            //console.log(result);
-            if(result.length==0){
-                vm.searchResult=true;
-            }else {
-                vm.searchResult=false;
-                vm.action=result;
+        if(vm.searchCont!='无搜索记录'){
+            if(!equals(vm.searchCont,"name",vm.value)){
+                locals.set('commonSearch',value,"add");
             }
+        }else{
+            locals.set('commonSearch',value,"add");
+        }
+        //搜索结果
+        function getResult(){
+            vm.action=search(vm.value,vm.actions,"name");
         }
         getResult();
         //刷新搜索记录

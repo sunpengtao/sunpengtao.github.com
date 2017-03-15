@@ -4,7 +4,7 @@
 .search{margin-top:125px; }/*搜索*/
 .controllerBox div p{width: 25%;float: left;height: 45px;line-height:45px;transition: 0.3s all;}/*房间切换*/
 .controllerBox span{height: 3px;position: absolute;bottom: -5px;left:0;}
-.cont{margin-top: 260px;}
+.cont{top: 307px;}
 
 .home1 li:nth-child(1){height:80px;}
 .home1 li:nth-child(1) span{margin-top: 35px;}
