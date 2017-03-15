@@ -25,8 +25,8 @@ app.controller('searchCtrl',function($scope,locals,ary,action,search,ui){
     };
     //初始化事件区域
     setTimeout(function(){
-        $("#text")[0].focus();
-    },1000)
+        angular.element(document.getElementById('text')).focus();
+    },700);
     vm.getSearchCont();
     //主动触发事件区域
     vm.search=function(type){
