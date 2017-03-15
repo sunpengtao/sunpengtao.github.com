@@ -11,24 +11,27 @@ app.controller('searchCtrl',function($scope,locals,ary,action,search,ui){
         input:document.getElementById("text"),
         goActions:function(num){
             action.go(num)
+        },
+        getSearchCont:function(){
+            vm.commonCont=locals.get("commonSearch");
+            if(vm.commonCont==null){
+                vm.searchCont='无搜索记录';
+                vm.showSearchCont=true;
+            }else{
+                vm.searchCont=vm.commonCont;
+                vm.showSearchCont=false;
+            }
         }
     };
-    function getSearchCont(){
-        vm.commonCont=locals.get("commonSearch");
-        if(vm.commonCont==null){
-            vm.searchCont='无搜索记录';
-            vm.showSearchCont=true;
-        }else{
-            vm.searchCont=vm.commonCont;
-            vm.showSearchCont=false;
-        }
-    }
-    getSearchCont();
+    //初始化事件区域
+    //$("#text")[0].focus();
+    vm.getSearchCont();
+    //主动触发事件区域
     vm.search=function(type){
         //清除内容
         if(type=='clear'){
             locals.remove('commonSearch');
-            getSearchCont();
+            vm.getSearchCont();
             return
         }
         //通过常用搜索搜索
@@ -64,7 +67,6 @@ app.controller('searchCtrl',function($scope,locals,ary,action,search,ui){
         }
         getResult();
         //刷新搜索记录
-        getSearchCont();
+        vm.getSearchCont();
     };
-    vm.input.focus();
 });

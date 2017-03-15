@@ -209,12 +209,15 @@ i,em {font-style:normal;}
 /*位置*/
 .p_r{position: relative;top:0;left:0}
 .p_a{position: absolute;top:0;left:0}
+.p_f{position: fixed;top:0;left:0}
 .mg_0a{ margin:0 auto;}/*块元素居中*/
 .ta_c{text-align: center}/*内容文字居中*/
 .ta_l{text-align: left}/*内容文字居左*/
 .ta_r{text-align: right}/*内容文字居右*/
 .f_l{float: left}/*左浮动*/
 .f_r{float: right}/*右浮动*/
+
+.t_a{top:auto}
 .t_1{top:1px}
 .t_2{top:2px}
 .t_3{top:3px}
@@ -222,6 +225,8 @@ i,em {font-style:normal;}
 .t_5{top:5px}
 .t_7{top:7px}
 .t_10{top:10px}
+
+.l_a{left: auto}
 .l_1{left:1px}
 .l_2{left:2px}
 .l_3{left:3px}
@@ -229,6 +234,9 @@ i,em {font-style:normal;}
 .l_5{left:5px}
 .l_7{left:7px}
 .l_10{left:10px}
+
+.r_0{right:0px}
+.r_15{right:15px}
 /*其他*/
 .d_b{display: block;}
 .d_i{display: inline;}

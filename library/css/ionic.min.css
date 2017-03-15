@@ -3610,12 +3610,12 @@ a.subdued:last-child {
     border-radius: 0;
     border-color: #d1d3d6;
     background-color: transparent;
-    color: #007aff;
-    font-size: 21px
+    color:#519c15;
+    font-size: 18px
 }
 
 .action-sheet .button:hover {
-    color: #007aff
+    color:#80e22e;
 }
 
 .action-sheet .button.destructive, .action-sheet .button.destructive:hover {
@@ -3625,7 +3625,7 @@ a.subdued:last-child {
 .action-sheet .button.activated, .action-sheet .button.active {
     box-shadow: none;
     border-color: #d1d3d6;
-    color: #007aff;
+    color:#519c15;
     background: #e4e5e7
 }
 

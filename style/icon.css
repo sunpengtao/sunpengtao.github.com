@@ -141,3 +141,13 @@
     top: 0;
     background-size: 70%;
 }
+.but_more:after{
+    content: "";
+    width: 25px;
+    height: 25px;
+    background: url("../img/png/more.png") no-repeat center center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: 80%;
+}

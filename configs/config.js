@@ -13,7 +13,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         .state('indexHome', {
             url: 'controllers/indexHome',
             tittle: '客厅',
-            header: false,
             footer: true,
             views: {
                 '': {
@@ -25,7 +24,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         .state('info', {
             url: 'controllers/info',
             tittle: '数据统计',
-            header: false,
             footer: true,
             views: {
                 '': {
@@ -37,7 +35,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         .state('timer', {
             url: 'controllers/timer',
             tittle: '时间轴',
-            header: false,
             footer: true,
             views: {
                 '': {
@@ -50,7 +47,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: 'controllers/search',
             tittle: '搜索',
             header: true,
-            footer: false,
             views: {
                 '': {
                     templateUrl: "controllers/search.html",
@@ -59,13 +55,13 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         })
         .state('account', {
-            url: 'controllers/account',
+            url: 'controllers/account/account',
             tittle: '个人流水',
-            header: true,
-            footer: false,
+            header:true,
+            more:true,
             views: {
                 '': {
-                    templateUrl: "controllers/account.html",
+                    templateUrl: "controllers/account/account.html",
                     controller: 'accountCtrl'
                 }
             }
@@ -74,7 +70,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: 'controllers/birthday',
             tittle: '生日提醒',
             header: true,
-            footer: false,
             views: {
                 '': {
                     templateUrl: "controllers/birthday.html",
@@ -86,7 +81,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: 'controllers/habit',
             tittle: '习惯养成',
             header: true,
-            footer: false,
             views: {
                 '': {
                     templateUrl: "controllers/habit.html",
@@ -98,7 +92,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: 'controllers/studyPlan',
             tittle: '学习计划',
             header: true,
-            footer: false,
             views: {
                 '': {
                     templateUrl: "controllers/studyPlan.html",
@@ -110,7 +103,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: 'controllers/doctor',
             tittle: '私人医生',
             header: true,
-            footer: false,
             views: {
                 '': {
                     templateUrl: "controllers/doctor.html",
@@ -122,7 +114,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: 'controllers/woman',
             tittle: '女生',
             header: true,
-            footer: false,
             views: {
                 '': {
                     templateUrl: "controllers/woman.html",
@@ -134,7 +125,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: 'controllers/manage',
             tittle: '理财计算器',
             header: true,
-            footer: false,
             views: {
                 '': {
                     templateUrl: "controllers/manage.html",
@@ -146,7 +136,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: 'controllers/repayment',
             tittle: '定期还款',
             header: true,
-            footer: false,
             views: {
                 '': {
                     templateUrl: "controllers/repayment.html",

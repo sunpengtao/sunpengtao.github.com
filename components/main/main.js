@@ -1,5 +1,5 @@
 var app = angular.module('app');
-app.controller('mainCtrl', function ($scope, $state, locals) {
+app.controller('mainCtrl', function ($scope, $state, $window , $ionicActionSheet , locals , moreBut) {
     var vm = $scope.vm = {
         tittle: "",
         oneClass: true,
@@ -8,6 +8,7 @@ app.controller('mainCtrl', function ($scope, $state, locals) {
             vm.header = state.header;
             vm.footer = state.footer;
             vm.iconLeft = state.iconLeft;
+            vm.more = state.more;
             vm.cut = vm.cut1 = "display:none;";
             var cont = "display:block;opacity:0;";
             vm.cut1 = cont + "top:-10px";
@@ -18,6 +19,7 @@ app.controller('mainCtrl', function ($scope, $state, locals) {
                 vm.cut = cont2 + "top:10px";
             }, 10)
         }),
+        //公共返回事件
         goback: function () {
             var url=locals.get("lastUrl");
             if (url!==undefined) {
@@ -26,6 +28,7 @@ app.controller('mainCtrl', function ($scope, $state, locals) {
                 $state.go("indexHome");
             }
         },
+        //底部按钮切换事件
         munClass: function (num) {
             vm.oneClass = vm.twoClass = vm.threeClass = false;
             if (num == "one") {
@@ -37,5 +40,9 @@ app.controller('mainCtrl', function ($scope, $state, locals) {
             }
         }
     };
+    vm.clickMore=function(){
+        moreBut(vm.tittle)
+    }
+    //进入页面跳转indexHome
     $state.go('indexHome');
 });

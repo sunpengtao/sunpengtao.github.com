@@ -37,6 +37,7 @@ app.directive('appLogin', function () {
         controller: 'loginCtrl'
     };
 });
+
 document.createElement('app-main');
 document.createElement('app-action');
 document.createElement('app-slide');
