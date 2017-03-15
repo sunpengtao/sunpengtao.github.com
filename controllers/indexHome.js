@@ -60,11 +60,13 @@ app.controller('indexHomeCtrl', function ($ionicScrollDelegate,$scope,$state,$io
     vm.avatar=function(){
         if(vm.cutNum==0){
             //点击头像打开左滑栏
-            vm.cut="left:200px;transform:scale(0.8,0.8)";
+            vm.cut="left:200px;transform:scale(0.8,0.8);";
+            vm.cut1="transform:scale(1.4,1.4);left:100px;top:80px";
+            vm.cut2="background-color:#84c0f2";
             vm.cutNum++;
         }else{
             //点击头像恢复主视图
-            vm.cut="left:0px;";
+            vm.cut=vm.cut1=vm.cut2="";
             vm.cutNum=0;
         }
 
