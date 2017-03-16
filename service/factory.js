@@ -37,40 +37,6 @@ app.factory('locals', ['$window', function () {
         }
     }
 }]);
-//点击功能跳转路由
-app.service('action', function ($state) {
-        this.go=function (num) {
-            switch (num) {
-                case "1":
-                    $state.go('account');
-                    break;
-                case "2":
-                    $state.go('birthday');
-                    break;
-                case "3":
-                    $state.go('doctor');
-                    break;
-                case "4":
-                    $state.go('habit');
-                    break;
-                case "5":
-                    $state.go('studyPlan');
-                    break;
-                case "6":
-                    $state.go('woman');
-                    break;
-                case "7":
-                    $state.go('manage');
-                    break;
-                case "8":
-                    $state.go('repayment');
-                    break;
-                case "b":
-                default:
-                    break;
-            }
-    }
-});
 //显示事件级别颜色
 app.service("gradeColor",function(){
     return  function (num){

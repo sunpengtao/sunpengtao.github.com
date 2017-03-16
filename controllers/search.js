@@ -2,15 +2,15 @@
  * Created by SPT on 2017/2/22.
  */
 var app=angular.module('app');
-app.controller('searchCtrl',function($scope,locals,ary,action,search,ui,equals,alertCont){
+app.controller('searchCtrl',function($scope,locals,ary,search,ui,equals,alertCont){
     var vm=$scope.vm={
         searchCont:"",
         showSearchCont:true,
         actions:ary.actions,
         searchResult:true,
         input:document.getElementById("text"),
-        goActions:function(num){
-            action.go(num)
+        goActions:function(url){
+            $state.go(url)
         },
         getSearchCont:function(){
             vm.commonCont=locals.get("commonSearch");

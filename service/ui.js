@@ -3,12 +3,27 @@
  */
 //弹出框
 var app=angular.module('app');
-app.factory('ui',function($ionicPopup){
+app.factory('ui',function($ionicPopup,$state){
         return{
             _alert:function(title,cont){
                  return $ionicPopup.alert({
                      title: title,
-                     template: cont
+                     template: cont,
+                     cancelText:"取消",
+                     okText:"确定"
+                });
+            },
+            _confirm:function(title,cont,url){
+                var confirmPopup = $ionicPopup.confirm({
+                    title: title,
+                    template: cont,
+                    cancelText:"取消",
+                    okText:"确定"
+                });
+                confirmPopup.then(function(res) {
+                    if(res) {
+                        $state.go(url);
+                    }
                 });
             }
         }
