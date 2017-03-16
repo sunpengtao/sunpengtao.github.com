@@ -45,4 +45,5 @@ app.controller('mainCtrl', function ($scope, $state, $window , $ionicActionSheet
     }
     //进入页面跳转indexHome
     $state.go('indexHome');
+    $ionicViewSwitcher.nextDirection("none")
 });
