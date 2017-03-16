@@ -1,9 +1,29 @@
-<div class="w_100 h_100 ts_1" style="{{vm.cut2}}">
+<div class="w_100 h_100 bg cl_w">
+    <div class="w180 p_a t_85 l_40">
+        <div ng-click="vm.leftGo(1)" class="f_r">
+            <p class="f_14 f_l">
+                <span class="d_b h30 lh_30">下午好，孙先生</span>
+                <span class="d_b h30 lh_30">133****1231</span>
+            </p>
+            <p class="f_l pt_25 pl_10"><i class="ic ic25 ic_into h15 w10"></i></p>
+        </div>
+        <ul class="p_a t_150">
+            <li ng-repeat="item in vm.leftAction" class="leftActionLi h40 lh_40 bt_w w180 p_r" on-repeat-finish>
+                <span class="p_a l_2 t_5 w30"><i class="ic ic30" ng-class="item.url"></i></span>
+                <span class="p_a l_50">{{item.name}}</span>
+                <span class="p_a l_a r_0 t_7"><i class="but but_Right tf_08"></i></span>
+            </li>
+        </ul>
+        <p class="p_a t_450">
+            <i class="ic ic25 ic_close"></i>
+            <span>退出</span>
+        </p>
+    </div>
 </div>
-<div class="avatar p_a br_50 z_2 ts_05" ng-click="vm.avatar()" style="{{vm.cut1}}">
+<div class="avatar p_a br_50 z_2 ts_03 bc_G" ng-click="vm.avatar()" style="{{vm.cut1}}">
     <img src="img/png/avatar.png">
 </div>
-<ion-view class="p_a ts_05 z_1" style="{{vm.cut}}">
+<ion-view class="p_a ts_03 z_1" style="{{vm.cut}}">
     <ion-header-bar class="p_a">
         <div class="banner w_100 p_a ts_1" id="name" style="{{vm.bannerUrl}}">
             <div class="search mg_0a h35 bc_w f_0 br_5 w_80" ng-click="vm.showSearch()">
@@ -14,10 +34,7 @@
             </div>
             <div class="w_100 h45 ta_c f_16 cl_w d_ib controllerBox p_r">
                 <div>
-                    <p ng-click="vm.controllerBox(0)" class="f_18 fw_b">大厅</p>
-                    <p ng-click="vm.controllerBox(1)">书房</p>
-                    <p ng-click="vm.controllerBox(2)">卧室</p>
-                    <p ng-click="vm.controllerBox(3)">厨房</p>
+                    <p ng-click="vm.controllerBox(item.num)" ng-repeat="item in vm.home">{{item.name}}</p>
                 </div>
                 <span style="{{vm.styleBox}}" class="w_25 bc_w ts_03"></span>
             </div>

@@ -133,4 +133,19 @@ app.service("equals",function(){
         }
     };
 });
-
+//利用angular指令监听ng-repeat渲染完成后执行脚本
+app.directive('onRepeatFinish',function(){
+    return {
+        link: function(scope,element,attr){
+            //console.log(scope.$index)
+            if(scope.$last == true){
+                //console.log('ng-repeat执行完毕')
+                //scope.$eval( attr.repeatFinish );
+                //向子控制器传递事件
+                //scope.$broadcast('to-child');
+                //向父控制器传递事件
+                scope.$emit('onRepeatFinished');
+            }
+        }
+    }
+});

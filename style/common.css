@@ -40,9 +40,10 @@ i,em {font-style:normal;}
 .w_95{width:95%;}
 .w_100{width:100%;}
 .h_100{height:100%;}
-.h15{height:15px;}
+
+.h15{height:15px !important;}
 .h17{height:17px;}
-.h20{height:20px;}
+.h20{height:20px !important;}
 .h25{height:25px;}
 .h30{height:30px;}
 .h35{height:35px;}
@@ -52,7 +53,8 @@ i,em {font-style:normal;}
 .h60{height:60px;}
 .h70{height:70px;}
 
-.w15{width:15px;}
+.w10{width:10px !important;}
+.w15{width:15px !important;}
 .w17{width:17px;}
 .w20{width:20px;}
 .w25{width:25px;}
@@ -63,6 +65,8 @@ i,em {font-style:normal;}
 .w50{width:50px;}
 .w60{width:60px;}
 .w70{width:70px;}
+.w180{width:180px;}
+.w200{width:200px;}
 
 .lh_25{line-height: 25px;}
 .lh_30{line-height: 30px;}
@@ -172,6 +176,7 @@ i,em {font-style:normal;}
 .br_G{border-right:1px solid #cccccc;}/*灰色*/
 .bb-bt_G{border-bottom:1px solid #cccccc;border-top:1px solid #cccccc;}/*灰色*/
 .bt_G{border-top:1px solid #cccccc;}/*灰色*/
+.bt_w{border-top:1px solid #fff;}
 .bd_n{border:none;}
 
 /*字体大小*/
@@ -202,6 +207,8 @@ i,em {font-style:normal;}
 .ts_03{transition: 0.3s all;}
 .ts_05{transition: 0.5s all;}
 .ts_1{transition: 1s all;}
+.tf_08{transform: scale(0.8,0.8);}
+.tf_07{transform: scale(0.7,0.7);}
 .br_50{border-radius: 50%;}
 .br_5{border-radius: 5px;}
 .br_10{border-radius: 10px;}
@@ -225,6 +232,11 @@ i,em {font-style:normal;}
 .t_5{top:5px}
 .t_7{top:7px}
 .t_10{top:10px}
+.t_85{top:85px}
+.t_90{top:90px}
+.t_100{top:100px}
+.t_150{top:150px}
+.t_450{top:450px}
 
 .l_a{left: auto}
 .l_1{left:1px}
@@ -234,6 +246,14 @@ i,em {font-style:normal;}
 .l_5{left:5px}
 .l_7{left:7px}
 .l_10{left:10px}
+.l_20{left:20px}
+.l_30{left:30px}
+.l_40{left:40px}
+.l_50{left:50px}
+.l_80{left:80px}
+.l_90{left:90px}
+.l_100{left:100px}
+
 
 .r_0{right:0px}
 .r_15{right:15px}
