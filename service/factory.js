@@ -99,6 +99,19 @@ app.service("equals",function(){
         }
     };
 });
+//判断数组里面的对象是否包含指定的内容
+app.factory("inputReg",function(){
+    return  {
+        numEnglish:function(value){
+            var reg = /^[0-9a-zA-Z\u4e00-\u9fa5_]{6,16}$/;
+            if(reg.test(value)){
+                return false
+            }else{
+                return true
+            }
+        }
+    }
+});
 //利用angular指令监听ng-repeat渲染完成后执行脚本
 app.directive('onRepeatFinish',function(){
     return {

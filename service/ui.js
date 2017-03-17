@@ -5,13 +5,21 @@
 var app=angular.module('app');
 app.factory('ui',function($ionicPopup,$state){
         return{
-            _alert:function(title,cont){
-                 return $ionicPopup.alert({
+            _alert:function(title,cont,url){
+                var confirmPopup = $ionicPopup.alert({
                      title: title,
                      template: cont,
                      cancelText:"取消",
                      okText:"确定"
                 });
+                confirmPopup.then(function(res) {
+                    if(res) {
+                        if(url){
+                            $state.go(url);
+                        }
+                    }
+                });
+
             },
             _confirm:function(title,cont,url){
                 var confirmPopup = $ionicPopup.confirm({
@@ -22,7 +30,9 @@ app.factory('ui',function($ionicPopup,$state){
                 });
                 confirmPopup.then(function(res) {
                     if(res) {
-                        $state.go(url);
+                        if(url){
+                            $state.go(url);
+                        }
                     }
                 });
             }
@@ -35,10 +45,10 @@ app.factory('alertCont',function(ui){
             //弹出状态为空
             if(value==''||value==null){
                 ui._alert("提示","输入内容不能为空");
+                return true
             }else{
                 return false
             }
-            return true
         }
     };
 });
