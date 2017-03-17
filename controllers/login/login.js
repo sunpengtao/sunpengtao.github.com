@@ -12,7 +12,7 @@ app.controller('loginsCtrl',function($scope,ui,alertCont,inputReg){
       begins:[0,2,6],
       lasts:[2,6,10],
       lens:[2,4,4],
-      prompts:['请输入6-16位英文或数字','密码不相同',],
+      prompts:['请输入6-16位英文或数字','密码不相同'],
       inputCont:[[{src:"ic_userName",cont:"请输入登录账号",type:"text"},{src:"ic_passWorld",cont:"请输入登录密码",type:"password"}],
            [{src:"ic_userName",cont:"请输入登录账号",type:"text"},{src:"ic_passWorld",cont:"请输入登录密码",type:"password"},{src:"ic_surePassWorld",cont:"确认登录密码",type:"password"},{src:"ic_123Code",cont:"输入安全码(找回密码用)",type:"password"}],
            [{src:"ic_userName",cont:"请输入要找回的账号",type:"text"},{src:"ic_123Code",cont:"请输入安全码",type:"password"},{src:"ic_passWorld",cont:"请输入新的登录密码",type:"password"},{src:"ic_surePassWorld",cont:"确认新的登录密码",type:"password"}]
@@ -54,7 +54,7 @@ app.controller('loginsCtrl',function($scope,ui,alertCont,inputReg){
               if(type=="登录"){
                   return
               }
-              if(type=="注册"&&cut1(1)==cut1(2)){
+              if(type=="注册"&&cut1(1)!=cut1(2)){
                   cut(2,1);
                   return
               }else if(type=="注册"){
