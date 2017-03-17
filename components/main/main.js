@@ -1,5 +1,5 @@
 var app = angular.module('app');
-app.controller('mainCtrl', function ($scope, $state, $window , $ionicActionSheet , locals , moreBut) {
+app.controller('mainCtrl', function ($scope, $state, $window , $ionicActionSheet ,$ionicViewSwitcher, locals , moreBut) {
     var vm = $scope.vm = {
         tittle: "",
         oneClass: true,
