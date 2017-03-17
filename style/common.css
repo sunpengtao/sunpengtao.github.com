@@ -13,6 +13,7 @@ i,em {font-style:normal;}
 .clearfix:after{content:".";display:block;height:0;font-size:0;clear:both;visibility:hidden;}
 /*单一样式:      1.距离类    2.颜色类    3.字体相关   4.位置类   5.css3相关  6其他*/
 /*********** 1.距离类 **************/
+.w_a{width:auto;}
 .w_5{width:5%;}
 .w_10{width:10%;}
 .w_15{width:15%;}
@@ -39,6 +40,8 @@ i,em {font-style:normal;}
 .w_90{width:90%;}
 .w_95{width:95%;}
 .w_100{width:100%;}
+
+.h_30{height:30%;}
 .h_100{height:100%;}
 
 .h15{height:15px !important;}
@@ -75,6 +78,7 @@ i,em {font-style:normal;}
 .lh_45{line-height: 45px;}
 .lh_45{line-height: 45px;}
 
+.pd_0 {padding:0px;}
 .pd_5 {padding:5px;}
 .pd_10{padding:10px;}
 .pd_15{padding:15px;}
@@ -91,6 +95,7 @@ i,em {font-style:normal;}
 .pt_20{padding-top:20px;}
 .pt_25{padding-top:25px;}
 .pt_30{padding-top:30px;}
+
 .pl_5 {padding-left:5px;}
 .pl_10{padding-left:10px;}
 .pl_15{padding-left:15px;}
@@ -232,11 +237,17 @@ i,em {font-style:normal;}
 .t_5{top:5px}
 .t_7{top:7px}
 .t_10{top:10px}
+.t_50{top:50px}
+.t_60{top:60px}
 .t_85{top:85px}
 .t_90{top:90px}
 .t_100{top:100px}
 .t_150{top:150px}
+.t_300{top:300px}
+.t_350{top:350px}
+.t_400{top:400px}
 .t_450{top:450px}
+.t_-10{top:-10px}
 
 .l_a{left: auto}
 .l_1{left:1px}
@@ -254,11 +265,13 @@ i,em {font-style:normal;}
 .l_90{left:90px}
 .l_100{left:100px}
 
+.b_0{bottom: 0px}
 .b_40{bottom: 40px}
 .b_70{bottom: 70px}
 
 .r_0{right:0px}
 .r_15{right:15px}
+.r_40{right:40px}
 /*其他*/
 .d_b{display: block;}
 .d_i{display: inline;}
@@ -273,7 +286,12 @@ i,em {font-style:normal;}
 
 
 /*组合样式*/
+/*自动图片背景*/
+.pImg{background: url('') no-repeat top left;background-size: 100% 100%;position: absolute;left: 0px;bottom: 0;right:0;top: 0;}
+/*圆角按钮*/
+.raBut{border-radius:20px;width:72%;height: 40px;color:#fff;line-height: 40px;font-size: 18px;text-align: center;margin: 0 auto;background-color: #519c15;}
 .nav-header .bar{border-bottom:1px solid #38710b;color:#38710b;}
+
 /*弹出框*/
 .bgPop{ position:absolute; top: 0; left: 0;bottom:0;right:0; background-color: rgba(255,255,255,0.4); height:100%;width:100%;z-index: 1;}
 /*功能样式*/

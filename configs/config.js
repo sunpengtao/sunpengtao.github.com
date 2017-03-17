@@ -32,6 +32,27 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                 }
             }
         })
+        .state('login', {
+            url: 'controllers/login/login',
+            tittle: '登录',
+            views: {
+                '': {
+                    templateUrl: "controllers/login/login.html",
+                    controller: 'loginsCtrl'
+                }
+            }
+        })
+        .state('protocol', {
+            url: 'controllers/login/protocol',
+            tittle: '注册协议',
+            header:true,
+            views: {
+                '': {
+                    templateUrl: "controllers/login/protocol.html",
+                    controller: 'protocolCtrl'
+                }
+            }
+        })
         .state('timer', {
             url: 'controllers/timer',
             tittle: '时间轴',

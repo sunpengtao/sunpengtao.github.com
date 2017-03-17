@@ -2,7 +2,7 @@
  * Created by SPT on 2017/2/22.
  */
 var app=angular.module('app');
-app.controller('searchCtrl',function($scope,locals,ary,search,ui,equals,alertCont){
+app.controller('searchCtrl',function($scope,$state,locals,ary,search,ui,equals,alertCont){
     var vm=$scope.vm={
         searchCont:"",
         showSearchCont:true,

@@ -28,6 +28,12 @@
     width: 25px;
     background-size: 80%
 }
+/*25图标*/
+.ic20{
+    height: 20px;
+    width: 20px;
+    background-size: 80%
+}
 .ic_home1 {
     background-image: url("../img/png/home1.png");
 }
@@ -91,6 +97,32 @@
 .ic_test{
     background-image: url("../img/png/test.png");
 }
+.ic_addend{
+    background-image: url("../img/png/addend.png");
+}
+.ic_123Code{
+    background-image: url("../img/png/123Code.png");
+}
+.ic_userName{
+    background-image: url("../img/png/userName.png");
+}
+.ic_surePassWorld{
+    background-image: url("../img/png/surePassWorld.png");
+}
+.ic_passWorld{
+    background-image: url("  ../img/png/passWorld.png");
+}
+.ic_phone{
+    background-image: url("../img/png/phone.png");
+}
+.ic_sure1{
+    background-image: url("../img/png/sure1.png");
+}
+.ic_sure2{
+    background-image: url("../img/png/sure2.png");
+}
+
+
 /*返回图标*/
 .butLeft {
     border-radius: 50%;

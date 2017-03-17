@@ -103,13 +103,7 @@ app.service("equals",function(){
 app.directive('onRepeatFinish',function(){
     return {
         link: function(scope,element,attr){
-            //console.log(scope.$index)
             if(scope.$last == true){
-                //console.log('ng-repeat执行完毕')
-                //scope.$eval( attr.repeatFinish );
-                //向子控制器传递事件
-                //scope.$broadcast('to-child');
-                //向父控制器传递事件
                 scope.$emit('onRepeatFinished');
             }
         }

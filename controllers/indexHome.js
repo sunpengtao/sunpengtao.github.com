@@ -20,7 +20,6 @@ app.controller('indexHomeCtrl', function ($ionicScrollDelegate,$scope,$state,$io
         pDom:document.getElementsByClassName('controllerBox')[0].getElementsByTagName('p'),
         goActions:function(url){
             $state.go(url)
-            //$ionicViewSwitcher.nextDirection("none")
         },
         controllerBox:function(num){
             if(num==vm.cutNum1){
@@ -60,6 +59,10 @@ app.controller('indexHomeCtrl', function ($ionicScrollDelegate,$scope,$state,$io
         $ionicScrollDelegate.$getByHandle('leftScroll').scrollTo(0,0,[true]);
     };
     vm.avatar=function(){
+        if(locals.get("login")==null||locals.get("login")==undefined){
+            $state.go('login');
+            return
+        };
         if(vm.cutNum==0){
             //点击头像打开左滑栏
             vm.popFt=false;
@@ -98,7 +101,6 @@ app.controller('indexHomeCtrl', function ($ionicScrollDelegate,$scope,$state,$io
         vm.timer1[i].color=gradeColor(vm.timer1[i].eventGrade);
         vm.timer.push(vm.timer1[i]);
     };
-    locals.set('lastUrl','indexHome');
     $scope.$on("onRepeatFinished", function () {
         vm.leftActionLi();
     });
