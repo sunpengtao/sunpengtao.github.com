@@ -10,7 +10,8 @@ app.controller('loginsCtrl',function($scope,ui,alertCont){
       butConts:["登录","注册","设置"],
       activeSlides:[0,1,2],
       begins:[0,2,6],
-      lasts:[1,5,9],
+      lasts:[2,6,10],
+      lens:[2,4,4],
       inputCont:[[{src:"ic_userName",cont:"请输入登录账号",type:"text"},{src:"ic_passWorld",cont:"请输入登录密码",type:"password"}],
            [{src:"ic_userName",cont:"请输入登录账号",type:"text"},{src:"ic_passWorld",cont:"请输入登录密码",type:"password"},{src:"ic_surePassWorld",cont:"确认登录密码",type:"password"},{src:"ic_123Code",cont:"输入安全码(找回密码用)",type:"password"}],
            [{src:"ic_userName",cont:"请输入要找回的账号",type:"text"},{src:"ic_123Code",cont:"请输入安全码",type:"password"},{src:"ic_passWorld",cont:"请输入新的登录密码",type:"password"},{src:"ic_surePassWorld",cont:"确认新的登录密码",type:"password"}]
@@ -24,9 +25,9 @@ app.controller('loginsCtrl',function($scope,ui,alertCont){
           };
       },
       succeed:function(type){
-          console.log(vm.value);
-          for(var i=0;i<vm.value;i++){
-              //console.log(vm.value[i].val())
+          console.log("长度为"+vm.value.length)
+          for(var c=0;c<vm.value.length;c++){
+              alert(vm.value[c].val())
           };
       },
       slideHasChanged:function(index){
@@ -35,17 +36,22 @@ app.controller('loginsCtrl',function($scope,ui,alertCont){
           vm.activeSlide=vm.activeSlides[index];
           var begin=vm.begins[index];
           var last=vm.lasts[index];
-          vm.getDom(begin,last);
+          var len=vm.lens[index];
+          vm.getDom(begin,last,len);
       },
-      getDom:function(begin,last){
-          vm.value=[];
+      getDom:function(begin,last,len){
           var num=$(".val").size();
           for(var i=0;i<num;i++){
               $(".val").eq(i).val("");
           };
-          for(var i=begin,j=0;i<last,j<len;i++){
-              vm.value[i]=$(".val").eq(i);
+          vm.value=[];
+          for(var i=begin,j=0;i<last,j<len;i++,j++){
+              vm.value[j]=$(".val").eq(i);
+              console.log(j+","+i)
           };
       }
   };
+    $scope.$on("onRepeatFinished", function () {
+        vm.getDom(0,2,2)
+    });
 });

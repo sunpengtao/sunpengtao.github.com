@@ -5,7 +5,7 @@
                 <ion-slide-box active-slide="vm.activeSlide" show-pager="false" on-slide-changed="vm.slideHasChanged(index)">
                     <ion-slide ng-repeat="items in vm.inputCont">
                         <div class="w_72 br_15 bd_g mg_0a pd_15">
-                            <p class="w_90 h35 bb_G mg_0a" style="margin: 0px auto 15px auto" ng-repeat="item in items">
+                            <p class="w_90 h35 bb_G mg_0a" style="margin: 0px auto 15px auto" ng-repeat="item in items" on-repeat-finish>
                                 <span class="f_l pt_5 pr_15"><i class="ic ic20 {{item.src}}"></i></span>
                                 <input type="{{item.type}}" placeholder="{{item.cont}}" class="val f_l">
                             </p>
