@@ -6,8 +6,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('default', {
             url: '',
-            controller: function ($scope, $state) {
-                $state.go('indexHome')
+            controller: function ($scope, $state,locals) {
+                if(locals.get('login')){
+                    $state.go('indexHome')
+                }else {
+                    $state.go('login')
+                };
             }
         })
         .state('indexHome', {
