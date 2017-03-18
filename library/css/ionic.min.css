@@ -3610,7 +3610,7 @@ a.subdued:last-child {
     border-radius: 0;
     border-color: #d1d3d6;
     background-color: transparent;
-    color:#519c15;
+    color:#6fcf4c;
     font-size: 18px
 }
 
@@ -3625,7 +3625,7 @@ a.subdued:last-child {
 .action-sheet .button.activated, .action-sheet .button.active {
     box-shadow: none;
     border-color: #d1d3d6;
-    color:#519c15;
+    color:#6fcf4c
     background: #e4e5e7
 }
 
@@ -5878,7 +5878,7 @@ ion-tabs.tabs-color-active-dark .tab-item.activated, ion-tabs.tabs-color-active-
     -moz-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-    padding: 10px;
+    padding: 20px;
     min-height: 65px
 }
 
@@ -5891,7 +5891,7 @@ ion-tabs.tabs-color-active-dark .tab-item.activated, ion-tabs.tabs-color-active-
     flex: 1;
     display: block;
     min-height: 45px;
-    border-radius: 2px;
+    border-radius: 20px;
     line-height: 20px;
     margin-right: 5px
 }
@@ -8387,7 +8387,7 @@ progress {
 }
 
 .button {
-    border-color: #b2b2b2;
+    /*border-color: #b2b2b2;*/
     background-color: #f8f8f8;
     color: #444;
     position: relative;
@@ -8541,7 +8541,7 @@ progress {
 }
 
 .button.button-positive {
-    background-color:#519c15;
+    background-color:#6fcf4c;
     color: #fff
 }
 
@@ -8551,7 +8551,7 @@ progress {
 }
 
 .button.button-positive.activated, .button.button-positive.active {
-    border-color: #0c63ee;
+    /*border-color: #0c63ee;*/
     background-color: #63bd1a;
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, .1)
 }
@@ -8651,9 +8651,9 @@ progress {
 }
 
 .button.button-assertive.button-outline {
-    border-color: #ef473a;
+    border-color: #38c747;
     background: 0 0;
-    color: #ef473a
+    color: #38c747;
 }
 
 .button.button-assertive.button-outline.activated, .button.button-assertive.button-outline.active {

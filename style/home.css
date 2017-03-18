@@ -17,5 +17,5 @@
     background: -webkit-linear-gradient( #5dadde,#add990); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(#5dadde,#add990); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient( #5dadde,#add990); /* Firefox 3.6 - 15 */
-    background: linear-gradient( #5dadde,#add990); /* 标准的语法 */
+    background: linear-gradient( rgba(71, 146, 211, 0.61),#add990) /* 标准的语法 */
 }

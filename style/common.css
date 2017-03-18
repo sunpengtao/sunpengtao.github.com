@@ -292,15 +292,12 @@ i,em {font-style:normal;}
 /*自动图片背景*/
 .pImg{background: url('') no-repeat top left;background-size: 100% 100%;position: absolute;left: 0px;bottom: 0;right:0;top: 0;}
 /*圆角按钮*/
-.raBut{border-radius:20px;width:72%;height: 40px;color:#fff;line-height: 40px;font-size: 18px;text-align: center;margin: 0 auto;background-color: #519c15;}
+.raBut{border-radius:20px;width:72%;height: 40px;color:#fff;line-height: 40px;font-size: 18px;text-align: center;margin: 0 auto;background-color: #6fcf4c}
 .nav-header .bar{border-bottom:1px solid #38710b;color:#38710b;}
 
 /*弹出框*/
 .bgPop{ position:absolute; top: 0; left: 0;bottom:0;right:0; background-color: rgba(255,255,255,0.4); height:100%;width:100%;z-index: 1;}
 /*功能样式*/
-.button.button-positive{background-color:#519c15;border:none}
-.popup-container .popup{border-radius: 10px;}
-.button.button-positive.active{background-color: #63bd1a;}
 
 
 
