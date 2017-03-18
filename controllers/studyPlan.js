@@ -3,5 +3,5 @@
  */
 var app=angular.module('app');
 app.controller('studyPlanCtrl',function($scope){
-
+    locals.set('lastUrl',"indexHome");
 });

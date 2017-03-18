@@ -2,10 +2,8 @@ var app = angular.module('app');
 app.controller('mainCtrl', function ($scope, $state, $window , $ionicActionSheet ,$ionicViewSwitcher, locals , moreBut) {
     var vm = $scope.vm = {
         tittle: "",
-        oldUrl:'',
         oneClass: true,
         configCont: $scope.$on('$stateChangeSuccess', function (event, state) {
-            locals.set('lastUrl',vm.oldUrl);
             vm.oldUrl = state.name;
             vm.tittle = state.tittle;
             vm.header = state.header;

@@ -4,5 +4,6 @@
 var app=angular.module('app');
 app.controller('accountCtrl',function($scope){
    var vm=$scope.vm={};
-   alert('sdsdsd');
+   //alert('sdsdsd');
+   locals.set('lastUrl',"indexHome");
 });

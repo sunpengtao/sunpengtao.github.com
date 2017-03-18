@@ -68,4 +68,5 @@ app.controller('searchCtrl',function($scope,$state,locals,ary,search,ui,equals,a
         //刷新搜索记录
         vm.getSearchCont();
     };
+    locals.set('lastUrl',"indexHome");
 });
