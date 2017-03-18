@@ -101,6 +101,10 @@ app.controller('loginsCtrl',function($scope,$state,ui,alertCont,inputReg,locals,
                       ui._alert("提示","用户名已存在");
                       return
                   }
+                  if(vm.protocolSure!="ic_sure2"){
+                      ui._alert("提示","拒绝注册协议");
+                      return
+                  }
                   locals.set('user',{userName:cut1(0),password:cut1(2),Code123:cut1(3),timeCode:getTime.now()},1);
                   locals.set('login',{userName:cut1(0),password:cut1(2),Code123:cut1(3),timeCode:getTime.now()});
                   //console.log(cut1(0));

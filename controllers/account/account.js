@@ -5,5 +5,5 @@ var app=angular.module('app');
 app.controller('accountCtrl',function($scope,locals){
    var vm=$scope.vm={};
    //alert('sdsdsd');
-   locals.set('lastUrl',"indexHome");
+   locals.set('lastUrl',"login");
 });

@@ -3,7 +3,6 @@
  */
 angular.module('app').controller("protocolCtrl",function($scope,locals){
     var vm=$scope.vm={
-      content:"协议内容"
     };
-    locals.set('lastUrl',"indexHome");
+    locals.set('lastUrl',"login");
 });
