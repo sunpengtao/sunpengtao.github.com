@@ -86,7 +86,6 @@ app.controller('loginsCtrl',function($scope,$state,ui,alertCont,inputReg,locals,
                   if(aryName&&aryName[0].password==cut1(1)){
                       locals.set('login',aryName);
                       $state.go("indexHome");
-                      vm.recoveryPmt(vm.obegin,vm.olast);
                   }else {
                       ui._alert("提示",'用户名或密码错误');
                   };
@@ -102,7 +101,7 @@ app.controller('loginsCtrl',function($scope,$state,ui,alertCont,inputReg,locals,
                   }
                   locals.set('user',{userName:cut1(0),password:cut1(2),Code123:cut1(3),timeCode:getTime.now()},1);
                   locals.set('login',{userName:cut1(0),password:cut1(2),Code123:cut1(3),timeCode:getTime.now()});
-                  vm.recoveryPmt(vm.obegin,vm.olast);
+                  //console.log(cut1(0));
                   ui._alert("恭喜注册成功","<p class='ta_l f_12 pd_15'>注册信息:<br/>1 .账号: <span class='cl_r'> "+cut1(0)+"</span><br/>2 .密码: <span class='cl_r'> "+cut1(1)+"</span><br/>2.安全码: <span class='cl_r'>"+cut1(3)+" </span><span class='d_b'><i class='f_r'>请牢记</i></span><p>","indexHome");
                   return
               }
