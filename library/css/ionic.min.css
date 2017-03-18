@@ -8543,6 +8543,7 @@ progress {
 .button.button-positive {
     background-color:#6fcf4c;
     color: #fff
+    border:1px solid #fff;
 }
 
 .button.button-positive:hover {
