@@ -11,7 +11,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         })
         .state('indexHome', {
-            url: 'controllers/indexHome',
+            url: '/controllers/indexHome',
             tittle: '客厅',
             footer: true,
             views: {
@@ -22,7 +22,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         })
         .state('info', {
-            url: 'controllers/info',
+            url: '/controllers/info',
             tittle: '数据统计',
             footer: true,
             views: {
@@ -33,7 +33,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         })
         .state('login', {
-            url: 'controllers/login/login',
+            url: '/controllers/login/login',
             tittle: '登录',
             views: {
                 '': {
@@ -43,7 +43,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         })
         .state('protocol', {
-            url: 'controllers/login/protocol',
+            url: '/controllers/login/protocol',
             tittle: '注册协议',
             header:true,
             views: {
@@ -54,7 +54,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         })
         .state('timer', {
-            url: 'controllers/timer',
+            url: '/controllers/timer',
             tittle: '时间轴',
             footer: true,
             views: {
@@ -65,7 +65,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         })
         .state('search', {
-            url: 'controllers/search',
+            url: '/controllers/search',
             tittle: '搜索',
             header: true,
             views: {
@@ -76,7 +76,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         })
         .state('account', {
-            url: 'controllers/account/account',
+            url: '/controllers/account/account',
             tittle: '个人流水',
             header:true,
             more:true,
@@ -88,7 +88,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         })
         .state('birthday', {
-            url: 'controllers/birthday',
+            url: '/controllers/birthday',
             tittle: '生日提醒',
             header: true,
             views: {
@@ -99,7 +99,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         })
         .state('habit', {
-            url: 'controllers/habit',
+            url: '/controllers/habit',
             tittle: '习惯养成',
             header: true,
             views: {
@@ -110,7 +110,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         })
         .state('studyPlan', {
-            url: 'controllers/studyPlan',
+            url: '/controllers/studyPlan',
             tittle: '学习计划',
             header: true,
             views: {
@@ -121,7 +121,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         })
         .state('doctor', {
-            url: 'controllers/doctor',
+            url: '/controllers/doctor',
             tittle: '私人医生',
             header: true,
             views: {
@@ -132,7 +132,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         })
         .state('woman', {
-            url: 'controllers/woman',
+            url: '/controllers/woman',
             tittle: '女生',
             header: true,
             views: {
@@ -143,7 +143,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         })
         .state('manage', {
-            url: 'controllers/manage',
+            url: '/controllers/manage',
             tittle: '理财计算器',
             header: true,
             views: {
@@ -154,7 +154,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         })
         .state('repayment', {
-            url: 'controllers/repayment',
+            url: '/controllers/repayment',
             tittle: '定期还款',
             header: true,
             views: {

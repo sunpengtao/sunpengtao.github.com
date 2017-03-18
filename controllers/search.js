@@ -62,7 +62,7 @@ app.controller('searchCtrl',function($scope,$state,locals,ary,search,ui,equals,a
         }
         //搜索结果
         function getResult(){
-            vm.action=search(vm.value,vm.actions,"name");
+            vm.action=search(vm.actions,"name",vm.value);
         }
         getResult();
         //刷新搜索记录

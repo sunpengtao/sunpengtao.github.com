@@ -47,6 +47,6 @@ app.controller('mainCtrl', function ($scope, $state, $window , $ionicActionSheet
         moreBut(vm.tittle)
     };
     //进入页面跳转indexHome
-    $state.go('indexHome');
+    $state.go('login');
     $ionicViewSwitcher.nextDirection("none")
 });

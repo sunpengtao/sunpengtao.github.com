@@ -5,7 +5,7 @@
 var app=angular.module('app');
 app.factory('ui',function($ionicPopup,$state){
         return{
-            _alert:function(title,cont,url){
+            _alert:function(title,cont,url,backcall){
                 var confirmPopup = $ionicPopup.alert({
                      title: title,
                      template: cont,
@@ -14,6 +14,9 @@ app.factory('ui',function($ionicPopup,$state){
                 });
                 confirmPopup.then(function(res) {
                     if(res) {
+                        if(backcall){
+                            backcall();
+                        }
                         if(url){
                             $state.go(url);
                         }
@@ -21,7 +24,7 @@ app.factory('ui',function($ionicPopup,$state){
                 });
 
             },
-            _confirm:function(title,cont,url){
+            _confirm:function(title,cont,url,backcall){
                 var confirmPopup = $ionicPopup.confirm({
                     title: title,
                     template: cont,
@@ -30,10 +33,13 @@ app.factory('ui',function($ionicPopup,$state){
                 });
                 confirmPopup.then(function(res) {
                     if(res) {
+                        if(backcall){
+                            backcall();
+                        }
                         if(url){
                             $state.go(url);
                         }
-                    }
+                    };
                 });
             }
         }
