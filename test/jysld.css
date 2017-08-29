@@ -1,0 +1,355 @@
+/*css reset start*/
+html, body, button, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, i, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, fieldset, form, input, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, time, mark, audio, video {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html {
+    font-family: PingFangSC-Light;
+    font-size: 20px;
+    color: #000;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #efeff4;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+input, select, textarea, button {
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.rel {
+    position: relative;
+}
+
+.abs {
+    position: absolute;
+}
+
+.dn {
+    display: none;
+}
+
+.cl {
+    clear: both;
+}
+
+.cl:after {
+    content: '';
+    height: 0;
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+
+.banner{
+    position: fixed;
+    width:100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.banner img{
+    width:100%
+}
+
+.banner a{
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 24%;
+    height: 100%;
+    top:0;
+    right: 7%;
+    display: -webkit-box;
+    display:box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+
+.btndown{
+    display:block;
+}
+
+#closebanner{
+    width: 10%;
+    height:100%;
+    top: 0rem;
+    right: 0%;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+#closebanner>img{
+    width:1rem;
+    height:1rem;
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+.tp {
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+.tp1 {
+    position: relative;
+    margin-bottom: 0.5rem;
+    background: #ffffff;
+    padding: 1rem 0;
+}
+.tp2 .tp-img:last-child {
+    margin-bottom: 0;
+}
+
+.tp2, .tp3 {
+    position: relative;
+    margin: 0.5rem 0;
+    background: #efeff4;
+    overflow: hidden;
+}
+
+.tp3> div:first-child {
+    margin-top: 0;
+}
+
+.tp3> div:last-child {
+    margin-bottom: 0;
+}
+
+
+/*组*/
+
+.tp-group {
+    /*padding:0.5rem 0;*/
+}
+
+.tp1 .tp-group:last-child {
+    margin-bottom: -1rem;
+}
+
+/*头部模板*/
+
+.tp2-new {
+    width: 100%;
+    padding: 1.125rem 0.8rem 0.75rem 0.8rem;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: relative;
+}
+
+.tp2-new h1 {
+    width: 100%;
+    font-size: 1.2rem;
+    color: #1D1D1D;
+    line-height: 1.5rem;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-family: PingFangSC-Light;
+}
+
+.tp2-new .time {
+    font-size: 0.7rem;
+    line-height: 0.85rem;
+    color: #999;
+    display: inline-block;
+}
+
+.readPv {
+    display: inline-block;
+    font-size: 0.7rem;
+    line-height: 0.65rem;
+    color: #999;
+    border-left: 1px solid #d8d8d8;
+}
+
+.tp2-new .ftitle {
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+    color: #666666;
+    margin-top: 0.85rem;
+    padding-left: 2.2rem;
+    min-height: 1.5rem;
+    max-height: 3.6rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    text-overflow: ellipsis;
+    position: relative;
+    text-align: justify;
+    font-family: PingFangSC-Light;
+}
+
+@media screen and (min-width: 375px) {
+    .tp2-new .ftitle {
+        -webkit-line-clamp: 2;
+        max-height: 2.2rem;
+    }
+}
+
+.tp2-new .markIcon {
+    width: 1.45rem;
+    height: 1.45rem;
+    background: url("image/markIcon.png") 0 0 no-repeat;
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 0.05rem;
+    left: 0;
+}
+
+
+/***头部模板 end****/
+
+
+/***图文编辑****/
+
+.tp-edit {
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    font-size: 0.8rem !important;
+    color: #333 !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+    line-height: 1.3rem;
+    font-weight: normal;
+}
+
+.tp-edit h3, .tp-edit h2, .tp-edit h4, .tp-edit h5 {
+    padding: 0 0.8rem;
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+    margin: 1.25rem 0;
+    color: #333333;
+    font-weight: bold;
+    text-align: inherit;
+    border: none;
+}
+
+.tp-edit h3:first-child {
+    margin-top: 0;
+}
+
+.tp-edit p {
+    padding: 0 0.8rem;
+    font-size: 0.9rem;
+    line-height: 1.45rem;
+    color: #1B1B1B;
+    margin-bottom: 1.25rem;
+    text-align: justify;
+    white-space: normal;
+    word-wrap: break-word;
+    font-family: PingFangSC-Light;
+}
+
+.tp-edit p:last-child {
+    margin-bottom: 0;
+}
+
+.tp-edit p:first-child {
+    margin-top: 0 !important;
+}
+
+.tp-edit p a {
+    text-decoration: underline;
+    color: #1B1B1B;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.tp-edit img {
+    width: 100%;
+    height: auto;
+}
+
+.tp-img {
+    width: 100%;
+}
+
+.tp-img img {
+    width: 100%;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.tp-group {
+    overflow: hidden;
+}
+
+/***/
+.tpWarp {
+    position: relative;
+}
+
+.main {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.head {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.head_img {
+    display: inline-block;
+    width: 1.15rem;
+    height: 1.15rem;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.name {
+    font-size: 0.7rem;
+    color: #666666;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.guanzhu {
+    margin-top: 0.2rem;
+    float: right;
+    display: inline-block;
+}
+
+.subscription {
+    font-size: 0.6rem;
+    color: #508cee;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    width: 2.5rem;
+    text-align: center;
+    top: 1rem;
+    border-radius: 1rem;
+    border: 1px solid #508cee;
+    box-sizing: border-box;
+    z-index: 10;
+}
